@@ -1,0 +1,30 @@
+[
+  {
+    "title": "重入攻击（Reentrancy Attack）",
+    "level": "入门",
+    "category": "智能合约安全",
+    "description": "通过简化的 DAO 合约演示重入攻击原理及其防御方法。",
+    "links": [
+      {
+        "name": "在 Remix 中打开",
+        "url": "https://remix.ethereum.org/"
+      },
+      {
+        "name": "实验说明文档",
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "title": "ERC20 代币合约实验",
+    "level": "基础",
+    "category": "智能合约开发",
+    "description": "部署并测试一个标准 ERC20 代币合约。",
+    "links": [
+      {
+        "name": "打开在线实验",
+        "url": "https://remix.ethereum.org/"
+      }
+    ]
+  }
+]
