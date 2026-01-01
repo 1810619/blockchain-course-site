@@ -88,6 +88,79 @@ th {
   font-weight: 600;
 }
 
+/* ===== 课程考核饼图 ===== */
+.assessment-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.pie-chart {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #60a5fa 0% 10%,     /* 考勤 */
+    #93c5fd 10% 20%,   /* 作业 */
+    #34d399 20% 40%,   /* 实验 */
+    #f97316 40% 100%   /* 考试 */
+  );
+  position: relative;
+}
+
+.pie-chart::after {
+  content: "考核\n比例";
+  position: absolute;
+  inset: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  white-space: pre-line;
+}
+
+/* 图例 */
+.legend {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.legend li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.dot.attendance { background: #60a5fa; }
+.dot.homework  { background: #93c5fd; }
+.dot.lab       { background: #34d399; }
+.dot.exam      { background: #f97316; }
+
+/* 手机适配 */
+@media (max-width: 600px) {
+  .assessment-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* ============== 授课教师信息块 ============== */
 .teacher-card {
   display: flex;
@@ -320,5 +393,6 @@ th {
     padding: 14px;
   }
 }
+
 
 
