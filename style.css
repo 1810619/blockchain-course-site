@@ -337,6 +337,68 @@ th {
 .bar.theory { background: #2563eb; }
 .bar.lab { background: #16a34a; }
 
+/* ===== 左侧目录 TOC 布局 ===== */
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.toc {
+  position: sticky;
+  top: 18px;
+  align-self: start;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 14px 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.toc-title {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.toc a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.toc a:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* 点击目录后平滑滚动（可选，但非常舒服） */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 给锚点留出顶部空间，避免被 header “顶住” */
+.card {
+  scroll-margin-top: 18px;
+}
+
+/* 手机端：目录变成顶部横向/隐藏（这里我选“自动隐藏”最省事） */
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .toc {
+    position: static;
+    order: -1;
+  }
+}
+
 /* ================== 响应式 ================== */
 @media (max-width: 860px) {
   .info-grid {
@@ -376,3 +438,4 @@ th {
     padding: 14px;
   }
 }
+
