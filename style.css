@@ -1,3 +1,4 @@
+/* ================== 全局基础样式 ================== */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   margin: 0;
@@ -27,6 +28,7 @@ section {
   margin-bottom: 28px;
 }
 
+/* ================== 通用卡片 ================== */
 .card {
   background: white;
   padding: 20px;
@@ -35,8 +37,10 @@ section {
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+/* ================== 按钮 ================== */
 .button,
-.links a {
+.links a,
+.btn {
   display: inline-block;
   margin-top: 10px;
   margin-right: 10px;
@@ -45,20 +49,31 @@ section {
   color: white;
   border-radius: 6px;
   text-decoration: none;
+  font-size: 14px;
 }
 
+.button:hover,
 .links a:hover,
-.button:hover {
+.btn:hover {
   background: #1d4ed8;
 }
 
+.btn.btn-lab {
+  background: #16a34a;
+}
+
+.btn.btn-lab:hover {
+  background: #15803d;
+}
+
+/* ================== 页脚 ================== */
 footer {
   text-align: center;
   padding: 20px;
   color: #666;
 }
 
-/* ============== 通用小样式 ============== */
+/* ================== 文本辅助 ================== */
 .muted {
   color: #64748b;
   font-size: 14px;
@@ -66,7 +81,7 @@ footer {
   line-height: 1.6;
 }
 
-/* ============== 表格（兼容首页课程安排等） ============== */
+/* ================== 表格样式 ================== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -88,80 +103,32 @@ th {
   font-weight: 600;
 }
 
-/* ===== 课程考核饼图 ===== */
-.assessment-container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin-top: 20px;
-  flex-wrap: wrap;
+/* ================== 课程概览卡片 ================== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.pie-chart {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: conic-gradient(
-    #60a5fa 0% 10%,     /* 考勤 */
-    #93c5fd 10% 20%,   /* 作业 */
-    #34d399 20% 40%,   /* 实验 */
-    #f97316 40% 100%   /* 考试 */
-  );
-  position: relative;
+.info-item {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
 }
 
-.pie-chart::after {
-  content: "考核比例";
-  position: absolute;
-  inset: 40px;
-  background: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 14px;
+.info-title {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.info-value {
   font-weight: 600;
-  color: #334155;
-  white-space: pre-line;
+  color: #0f172a;
 }
 
-/* 图例 */
-.legend {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 15px;
-}
-
-.legend li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.dot.attendance { background: #60a5fa; }
-.dot.homework  { background: #93c5fd; }
-.dot.lab       { background: #34d399; }
-.dot.exam      { background: #f97316; }
-
-/* 手机适配 */
-@media (max-width: 600px) {
-  .assessment-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* ============== 授课教师信息块 ============== */
+/* ================== 授课教师 ================== */
 .teacher-card {
   display: flex;
   align-items: center;
@@ -186,7 +153,7 @@ th {
   color: #1e3a8a;
 }
 
-/* ============== 参考教材（带封面） ============== */
+/* ================== 参考教材 ================== */
 .book-card {
   display: flex;
   gap: 20px;
@@ -206,13 +173,101 @@ th {
   padding: 4px;
 }
 
-
 .book-info h3 {
   margin-top: 0;
   color: #0f172a;
 }
 
-/* ============== 甘特图：头部（周次刻度） ============== */
+/* ================== 列表美化 ================== */
+.nice-list li {
+  margin: 8px 0;
+  line-height: 1.7;
+}
+
+/* ================== 折叠详情 ================== */
+.details-box {
+  margin-top: 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.details-box summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.details-box p {
+  margin: 10px 0 0;
+  color: #334155;
+  line-height: 1.7;
+}
+
+/* ================== 课程考核饼图 ================== */
+.assessment-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.pie-chart {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #60a5fa 0% 10%,
+    #93c5fd 10% 20%,
+    #34d399 20% 40%,
+    #f97316 40% 100%
+  );
+  position: relative;
+}
+
+.pie-chart::after {
+  content: "考核比例";
+  position: absolute;
+  inset: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.legend {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.legend li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.dot.attendance { background: #60a5fa; }
+.dot.homework  { background: #93c5fd; }
+.dot.lab       { background: #34d399; }
+.dot.exam      { background: #f97316; }
+
+/* ================== 甘特图 ================== */
 .gantt-wrap {
   background: #fff;
   border-radius: 10px;
@@ -223,7 +278,6 @@ th {
 .gantt-header {
   display: grid;
   grid-template-columns: 180px 1fr;
-  align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
@@ -251,7 +305,6 @@ th {
   border: 1px solid #eef2f7;
 }
 
-/* ============== 甘特图主体 ============== */
 .gantt {
   display: grid;
   grid-template-columns: 180px repeat(16, 1fr);
@@ -281,96 +334,21 @@ th {
   text-overflow: ellipsis;
 }
 
-.bar.theory {
-  background: #2563eb;
-}
+.bar.theory { background: #2563eb; }
+.bar.lab { background: #16a34a; }
 
-.bar.lab {
-  background: #16a34a;
-}
-
-/* ============== 章节目录 + 四按钮（美观且不拥挤） ============== */
-.chapter {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 16px 16px 14px 16px;
-  margin: 14px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  border-left: 5px solid #2563eb;
-}
-
-.chapter-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.chapter h3 {
-  margin: 0;
-  font-size: 16px;
-  color: #0f172a;
-}
-
-.chapter-tag {
-  font-size: 12px;
-  color: #475569;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  padding: 2px 8px;
-  border-radius: 999px;
-  white-space: nowrap;
-}
-
-.sublist {
-  margin-top: 10px;
-  padding-left: 12px;
-  border-left: 2px dashed #e2e8f0;
-}
-
-.subitem {
-  margin: 6px 0;
-  color: #334155;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.buttons {
-  margin-top: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 7px 12px;
-  background: #2563eb;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 14px;
-  border: 1px solid rgba(255,255,255,0.0);
-}
-
-.btn:hover {
-  background: #1d4ed8;
-}
-
-.btn.btn-lab {
-  background: #16a34a;
-}
-
-.btn.btn-lab:hover {
-  background: #15803d;
-}
-
-/* ============== 响应式：手机适配 ============== */
+/* ================== 响应式 ================== */
 @media (max-width: 860px) {
-  .gantt-header, .gantt {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gantt-header,
+  .gantt {
     grid-template-columns: 140px repeat(16, 1fr);
   }
-  .label, .gantt-corner {
+
+  .label {
     font-size: 13px;
   }
 }
@@ -379,21 +357,22 @@ th {
   header p {
     margin-bottom: 6px;
   }
+
   main {
     margin: 18px auto;
   }
-  .gantt-header, .gantt {
+
+  .gantt-header,
+  .gantt {
     grid-template-columns: 120px repeat(16, 1fr);
   }
+
   .bar {
     font-size: 12px;
-    padding: 6px 6px;
+    padding: 6px;
   }
+
   .chapter {
     padding: 14px;
   }
 }
-
-
-
-
