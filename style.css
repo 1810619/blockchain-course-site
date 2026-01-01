@@ -125,11 +125,14 @@ th {
 
 .book-card img {
   width: 120px;
-  height: auto;
+  max-height: 170px;
+  object-fit: contain;
   border-radius: 6px;
   border: 1px solid #e5e7eb;
   background: #fff;
+  padding: 4px;
 }
+
 
 .book-info h3 {
   margin-top: 0;
@@ -317,4 +320,5 @@ th {
     padding: 14px;
   }
 }
+
 
