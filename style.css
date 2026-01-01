@@ -111,7 +111,7 @@ th {
 }
 
 .pie-chart::after {
-  content: "考核\n比例";
+  content: "考核比例";
   position: absolute;
   inset: 40px;
   background: #fff;
@@ -393,6 +393,7 @@ th {
     padding: 14px;
   }
 }
+
 
 
 
