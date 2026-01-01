@@ -23,6 +23,10 @@ main {
   padding: 0 20px;
 }
 
+section {
+  margin-bottom: 28px;
+}
+
 .card {
   background: white;
   padding: 20px;
@@ -52,4 +56,230 @@ footer {
   text-align: center;
   padding: 20px;
   color: #666;
+}
+
+/* ============== 通用小样式 ============== */
+.muted {
+  color: #64748b;
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+/* ============== 表格（兼容首页课程安排等） ============== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+th, td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+}
+
+/* ============== 授课教师信息块 ============== */
+.teacher {
+  background: #f9fafb;
+  border-left: 4px solid #2563eb;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 6px;
+}
+
+.teacher h3 {
+  margin-top: 0;
+  color: #1e3a8a;
+}
+
+/* ============== 甘特图：头部（周次刻度） ============== */
+.gantt-wrap {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.gantt-header {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.gantt-corner {
+  font-weight: 600;
+  text-align: right;
+  padding-right: 10px;
+  color: #334155;
+}
+
+.gantt-weeks {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.gantt-weeks span {
+  text-align: center;
+  padding: 2px 0;
+  border-radius: 4px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+}
+
+/* ============== 甘特图主体 ============== */
+.gantt {
+  display: grid;
+  grid-template-columns: 180px repeat(16, 1fr);
+  gap: 6px;
+}
+
+.gantt-row {
+  display: contents;
+}
+
+.label {
+  font-weight: 600;
+  text-align: right;
+  padding-right: 10px;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+.bar {
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar.theory {
+  background: #2563eb;
+}
+
+.bar.lab {
+  background: #16a34a;
+}
+
+/* ============== 章节目录 + 四按钮（美观且不拥挤） ============== */
+.chapter {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px 16px 14px 16px;
+  margin: 14px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  border-left: 5px solid #2563eb;
+}
+
+.chapter-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.chapter h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.chapter-tag {
+  font-size: 12px;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.sublist {
+  margin-top: 10px;
+  padding-left: 12px;
+  border-left: 2px dashed #e2e8f0;
+}
+
+.subitem {
+  margin: 6px 0;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.buttons {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 7px 12px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid rgba(255,255,255,0.0);
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.btn.btn-lab {
+  background: #16a34a;
+}
+
+.btn.btn-lab:hover {
+  background: #15803d;
+}
+
+/* ============== 响应式：手机适配 ============== */
+@media (max-width: 860px) {
+  .gantt-header, .gantt {
+    grid-template-columns: 140px repeat(16, 1fr);
+  }
+  .label, .gantt-corner {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 720px) {
+  header p {
+    margin-bottom: 6px;
+  }
+  main {
+    margin: 18px auto;
+  }
+  .gantt-header, .gantt {
+    grid-template-columns: 120px repeat(16, 1fr);
+  }
+  .bar {
+    font-size: 12px;
+    padding: 6px 6px;
+  }
+  .chapter {
+    padding: 14px;
+  }
 }
