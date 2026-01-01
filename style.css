@@ -89,17 +89,51 @@ th {
 }
 
 /* ============== 授课教师信息块 ============== */
-.teacher {
+.teacher-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   background: #f9fafb;
-  border-left: 4px solid #2563eb;
-  padding: 15px 20px;
-  margin: 20px 0;
-  border-radius: 6px;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #2563eb;
 }
 
-.teacher h3 {
-  margin-top: 0;
+.teacher-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #e5e7eb;
+  background: #fff;
+}
+
+.teacher-info h3 {
+  margin: 0 0 6px;
   color: #1e3a8a;
+}
+
+/* ============== 参考教材（带封面） ============== */
+.book-card {
+  display: flex;
+  gap: 20px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.book-card img {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.book-info h3 {
+  margin-top: 0;
+  color: #0f172a;
 }
 
 /* ============== 甘特图：头部（周次刻度） ============== */
@@ -283,3 +317,4 @@ th {
     padding: 14px;
   }
 }
+
