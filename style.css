@@ -7,9 +7,37 @@ body {
 }
 
 header {
-  background: #1e293b;
+  position: relative;
+  background-image: url("assets/image/header-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
-  padding: 20px;
+  padding: 40px 20px 30px;
+}
+
+/* 半透明遮罩，保证文字清晰 */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65); /* 深蓝遮罩 */
+  z-index: 0;
+}
+
+/* 让文字在遮罩上方 */
+header * {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  margin-bottom: 6px;
+}
+
+header p {
+  margin-top: 0;
+  opacity: 0.9;
 }
 
 nav a {
@@ -438,4 +466,5 @@ html {
     padding: 14px;
   }
 }
+
 
