@@ -345,92 +345,108 @@ th {
 .dot.lab       { background: #34d399; }
 .dot.exam      { background: #f97316; }
 
-/* ================== 甘特图 ================== */
-/* ===== 甘特图：更清晰的行高、刻度、条形 ===== */
+/* ================== 甘特图（清晰版：固定列宽 + 横向滚动） ================== */
 .gantt-wrap {
   background: #fff;
   border-radius: 12px;
   padding: 14px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+
+  /* ✅ 关键：空间不够就横向滚动，而不是挤成竖排 */
+  overflow-x: auto;
 }
 
+/* 统一一个可滚动的“画布宽度” */
+.gantt-header,
+.gantt {
+  /* 标签列 220 + 16周*44 + gap ≈ 220 + 704 + …，这会比 900 稍宽，保证不挤 */
+  min-width: 980px;
+}
+
+/* 顶部：模块 + 周次 */
 .gantt-header {
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 10px;
-  margin-bottom: 10px;
+  grid-template-columns: 220px repeat(16, 44px); /* ✅ 固定每周宽度 */
+  gap: 8px;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .gantt-corner {
   font-weight: 700;
-  text-align: left;
   color: #0f172a;
   padding-left: 6px;
 }
 
 .gantt-weeks {
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  gap: 6px;
+  display: contents; /* ✅ 让 16 个 span 直接占据网格列 */
+}
+
+.gantt-weeks span {
+  width: 44px;
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
   font-size: 12px;
   color: #64748b;
 }
 
-.gantt-weeks span {
-  text-align: center;
-  padding: 4px 0;
-  border-radius: 6px;
-  background: #f8fafc;
-  border: 1px solid #eef2f7;
-}
-
-/* 主体网格：1列标签 + 16列周次 */
+/* 主体：标签列 + 16周 */
 .gantt {
   display: grid;
-  grid-template-columns: 180px repeat(16, 1fr);
-  gap: 8px 6px;            /* 行间距/列间距 */
+  grid-template-columns: 220px repeat(16, 44px);
+  gap: 10px 8px; /* 行间距/列间距 */
 }
 
-/* 每一行：使用 contents 让 label 和 bar 对齐到同一行 */
+/* 每一行 */
 .gantt-row {
   display: contents;
 }
 
+/* 左侧模块名：不允许竖排，必要时省略号 */
 .label {
   align-self: center;
+  padding-left: 6px;
   text-align: left;
   font-weight: 600;
   color: #0f172a;
-  padding-left: 6px;
   font-size: 14px;
-  line-height: 1.4;
+
+  white-space: nowrap;        /* ✅ 防止竖排 */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* 条形：固定高度 + 居中 + 文字清晰 */
+/* 条形：一定要让文字在色块内部居中 */
 .bar {
-  height: 34px;
-  display: flex;
+  height: 36px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+
+  display: flex;              /* ✅ 文字居中 */
   align-items: center;
   justify-content: center;
 
-  border-radius: 10px;
-  font-size: 13px;
-  font-weight: 600;
+  box-sizing: border-box;
+  padding: 0 10px;
 
-  color: #fff;
-  white-space: nowrap;
+  white-space: nowrap;        /* ✅ 不换行 */
   overflow: hidden;
   text-overflow: ellipsis;
 
   box-shadow: 0 2px 6px rgba(0,0,0,0.10);
 }
 
-/* 颜色沿用你之前的：理论蓝 / 实验绿 */
+/* 颜色 */
 .bar.theory { background: #2563eb; }
 .bar.lab    { background: #16a34a; }
 
-/* 图例 */
+/* 图例（如果你有 legend） */
 .gantt-legend {
   display: flex;
   gap: 16px;
@@ -456,13 +472,12 @@ th {
 .legend-dot.theory { background: #2563eb; }
 .legend-dot.lab    { background: #16a34a; }
 
-/* 小屏优化：标签列变窄，字体更紧凑 */
-@media (max-width: 860px) {
-  .gantt-header { grid-template-columns: 140px 1fr; }
-  .gantt { grid-template-columns: 140px repeat(16, 1fr); }
-  .bar { height: 32px; font-size: 12px; }
+/* 小屏：仍然可滚动，只把字号稍微缩一点 */
+@media (max-width: 720px) {
   .label { font-size: 13px; }
+  .bar { height: 34px; font-size: 12px; }
 }
+
 
 
 /* ===== 左侧目录 TOC 布局 ===== */
@@ -602,6 +617,7 @@ header {
   position: relative;
   padding: 90px 20px 40px; /* 顶部留空间给导航 */
 }
+
 
 
 
