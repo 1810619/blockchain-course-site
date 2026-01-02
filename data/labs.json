@@ -1,30 +1,59 @@
 [
   {
-    "title": "重入攻击（Reentrancy Attack）",
+    "title": "Lab 0：认识区块链数据（交易/区块/日志）",
     "level": "入门",
-    "category": "智能合约安全",
-    "description": "通过简化的 DAO 合约演示重入攻击原理及其防御方法。",
+    "category": "原理认知",
+    "description": "学会在区块浏览器中查看交易、区块、合约地址与事件日志，并把课堂概念对应到真实页面。",
     "links": [
-      {
-        "name": "在 Remix 中打开",
-        "url": "https://remix.ethereum.org/"
-      },
-      {
-        "name": "实验说明文档",
-        "url": "#"
-      }
+      { "name": "Sepolia 浏览器", "url": "https://sepolia.etherscan.io/" }
     ]
   },
   {
-    "title": "ERC20 代币合约实验",
-    "level": "基础",
-    "category": "智能合约开发",
-    "description": "部署并测试一个标准 ERC20 代币合约。",
+    "title": "Lab 1：CryptoZombies 关卡练习（Solidity 入门）",
+    "level": "入门",
+    "category": "交互式学习",
+    "description": "完成指定关卡：合约结构、状态变量、函数、modifier、事件等，为后续 Remix 实操做准备。",
     "links": [
-      {
-        "name": "打开在线实验",
-        "url": "https://remix.ethereum.org/"
-      }
+      { "name": "CryptoZombies", "url": "https://cryptozombies.io/" }
+    ]
+  },
+  {
+    "title": "Lab 2：Remix 写第一个合约（投票/计数器）",
+    "level": "基础",
+    "category": "智能合约",
+    "description": "在 Remix 编写并部署合约，理解编译版本、部署参数、调用方法、Gas 与交易记录。",
+    "links": [
+      { "name": "Remix IDE", "url": "https://remix.ethereum.org" }
+    ]
+  },
+  {
+    "title": "Lab 3：Remix + MetaMask 部署到测试网",
+    "level": "基础",
+    "category": "链上交互",
+    "description": "使用 MetaMask 连接 Remix，将合约部署到测试网，并在区块浏览器中验证交易与合约代码。",
+    "links": [
+      { "name": "MetaMask", "url": "https://metamask.io" },
+      { "name": "Remix IDE", "url": "https://remix.ethereum.org" },
+      { "name": "Sepolia 浏览器", "url": "https://sepolia.etherscan.io/" }
+    ]
+  },
+  {
+    "title": "Lab 4：本地私链与自动化测试（Hardhat/Ganache）",
+    "level": "进阶",
+    "category": "工程化",
+    "description": "搭建本地链，编写部署脚本与单元测试（断言事件日志、权限控制、边界条件）。",
+    "links": [
+      { "name": "Hardhat", "url": "https://hardhat.org/" },
+      { "name": "Ganache", "url": "https://trufflesuite.com/ganache/" }
+    ]
+  },
+  {
+    "title": "Lab 5：联盟链业务仿真（Fabric：溯源/存证/协同）",
+    "level": "拓展",
+    "category": "联盟链",
+    "description": "面向真实组织协作：多组织、多角色权限、链码调用与审计；适合作为课程大作业方向。",
+    "links": [
+      { "name": "Hyperledger Fabric", "url": "https://www.hyperledger.org/use/fabric" }
     ]
   }
 ]
