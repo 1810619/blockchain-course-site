@@ -21,77 +21,103 @@
 
 <main>
 
-  <!-- ================= 教学进度甘特图 ================= -->
-  <section>
-    <h2>课程教学进度安排</h2>
-    <p class="muted">
-      说明：蓝色为理论课，绿色为实验课。横向表示对应周次（第1–16周）。
-    </p>
+<!-- ================= 教学进度甘特图（清晰版） ================= -->
+<section class="card" id="gantt">
+  <h2>课程教学进度安排</h2>
+  <p class="muted">蓝色为理论课，绿色为实验课；横向表示第 1–16 周。</p>
 
-    <div class="gantt-wrap">
-      <div class="gantt-header">
-        <span class="gantt-corner">周次</span>
-        <div class="gantt-weeks">
-          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
-          <span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
-        </div>
-      </div>
-
-      <div class="gantt">
-
-        <div class="gantt-row">
-          <span class="label">第1章 原理概述</span>
-          <div class="bar theory" style="grid-column: 1 / 4;">第1–3周</div>
-        </div>
-
-        <div class="gantt-row">
-          <span class="label">实验1：环境与工具</span>
-          <div class="bar lab" style="grid-column: 4 / 5;">第4周</div>
-        </div>
-
-        <div class="gantt-row">
-          <span class="label">第2章 开发相关技术</span>
-          <div class="bar theory" style="grid-column: 5 / 8;">第5–7周</div>
-        </div>
-
-        <div class="gantt-row">
-          <span class="label">实验2：智能合约入门</span>
-          <div class="bar lab" style="grid-column: 8 / 9;">第8周</div>
-        </div>
-
-        <div class="gantt-row">
-          <span class="label">第3章 区块与账本</span>
-          <div class="bar theory" style="grid-column: 9 / 11;">第9–10周</div>
-        </div>
-
-        <div class="gantt-row">
-          <span class="label">第4章 账户与交易</span>
-          <div class="bar theory" style="grid-column: 11 / 12;">第11周</div>
-        </div>
-
-        <div class="gantt-row">
-          <span class="label">实验3：部署与交互</span>
-          <div class="bar lab" style="grid-column: 12 / 13;">第12周</div>
-        </div>
-
-        <div class="gantt-row">
-          <span class="label">第5章 节点通信</span>
-          <div class="bar theory" style="grid-column: 13 / 14;">第13周</div>
-        </div>
-
-        <div class="gantt-row">
-          <span class="label">实验4：综合实验</span>
-          <div class="bar lab" style="grid-column: 14 / 15;">第14周</div>
-        </div>
-
-        <div class="gantt-row">
-          <span class="label">第6–8章 共识/合约/实训</span>
-          <div class="bar theory" style="grid-column: 15 / 17;">第15–16周</div>
-        </div>
-
+  <div class="gantt-wrap">
+    <!-- 顶部周次刻度 -->
+    <div class="gantt-header">
+      <span class="gantt-corner">模块</span>
+      <div class="gantt-weeks">
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+        <span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
       </div>
     </div>
-  </section>
+
+    <!-- 主体 -->
+    <div class="gantt">
+
+      <div class="gantt-row">
+        <span class="label">第1章 原理概述</span>
+        <div class="bar theory" style="grid-column: 2 / 5;">
+          第1–3周 · 理论
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <span class="label">实验1：环境与工具</span>
+        <div class="bar lab" style="grid-column: 5 / 6;">
+          第4周 · 实验
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <span class="label">第2章 开发相关技术</span>
+        <div class="bar theory" style="grid-column: 6 / 9;">
+          第5–7周 · 理论
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <span class="label">实验2：智能合约入门</span>
+        <div class="bar lab" style="grid-column: 9 / 10;">
+          第8周 · 实验
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <span class="label">第3章 区块与账本</span>
+        <div class="bar theory" style="grid-column: 10 / 12;">
+          第9–10周 · 理论
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <span class="label">第4章 账户与交易</span>
+        <div class="bar theory" style="grid-column: 12 / 13;">
+          第11周 · 理论
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <span class="label">实验3：部署与交互</span>
+        <div class="bar lab" style="grid-column: 13 / 14;">
+          第12周 · 实验
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <span class="label">第5章 节点通信</span>
+        <div class="bar theory" style="grid-column: 14 / 15;">
+          第13周 · 理论
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <span class="label">实验4：综合实验</span>
+        <div class="bar lab" style="grid-column: 15 / 16;">
+          第14周 · 实验
+        </div>
+      </div>
+
+      <div class="gantt-row">
+        <span class="label">第6–8章 共识 / 合约 / 实训</span>
+        <div class="bar theory" style="grid-column: 16 / 18;">
+          第15–16周 · 理论
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 图例 -->
+    <div class="gantt-legend">
+      <span class="legend-item"><i class="legend-dot theory"></i>理论课</span>
+      <span class="legend-item"><i class="legend-dot lab"></i>实验课</span>
+    </div>
+  </div>
+</section>
 
   <!-- ================= 课程目录 + 四按钮 ================= -->
   <section>
