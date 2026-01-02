@@ -511,3 +511,19 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+
+.image-card {
+  margin-top: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
