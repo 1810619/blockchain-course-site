@@ -53,8 +53,169 @@
         </p>
 
         <div class="image-card">
-          <img src="assets/image/course-map.png" alt="区块链课程图谱">
-        </div>
+
+  <!-- 课程知识图谱 SVG -->
+  <div class="svg-wrapper">
+    <svg viewBox="0 0 1100 720" width="100%" height="auto" role="img" aria-label="区块链技术与应用课程知识图谱"
+     xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 背景淡渐变 -->
+    <linearGradient id="bgGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f7fafc"/>
+    </linearGradient>
+
+    <!-- 卡片阴影 -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+
+    <!-- 箭头 -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+
+    <!-- 小圆点 -->
+    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6">
+      <circle cx="5" cy="5" r="3" fill="#94a3b8"/>
+    </marker>
+
+    <style>
+      .title { font: 700 26px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; fill:#0f172a; }
+      .subtitle { font: 400 14px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; fill:#475569; }
+      .layerTag { font: 700 13px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; fill:#0f172a; }
+      .nodeTitle { font: 700 16px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; fill:#0f172a; }
+      .nodeText { font: 400 13px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; fill:#334155; }
+      .hint { font: 400 12px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; fill:#64748b; }
+      .stroke { stroke:#cbd5e1; stroke-width:1; }
+      .link { cursor:pointer; }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1100" height="720" fill="url(#bgGrad)"/>
+
+  <!-- 标题区 -->
+  <text x="40" y="52" class="title">区块链技术与应用｜课程知识图谱</text>
+  <text x="40" y="78" class="subtitle">从“认知 → 技术 → 机制 → 应用”递进，形成面向管理场景的理解与实践能力</text>
+
+  <!-- 右上角图例 -->
+  <g transform="translate(820,34)">
+    <rect x="0" y="0" width="240" height="74" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+    <circle cx="18" cy="24" r="6" fill="#3b82f6"/>
+    <text x="34" y="28" class="hint">理论模块</text>
+    <circle cx="18" cy="48" r="6" fill="#22c55e"/>
+    <text x="34" y="52" class="hint">实践/实验模块</text>
+    <path d="M170 26 L220 26" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="170" y="52" class="hint">学习路径</text>
+  </g>
+
+  <!-- 分层背景板（四层） -->
+  <g>
+    <rect x="40" y="120" width="1020" height="130" rx="16" fill="#eff6ff"/>
+    <rect x="40" y="270" width="1020" height="130" rx="16" fill="#ecfeff"/>
+    <rect x="40" y="420" width="1020" height="130" rx="16" fill="#f0fdf4"/>
+    <rect x="40" y="570" width="1020" height="120" rx="16" fill="#fff7ed"/>
+
+    <text x="60" y="150" class="layerTag">基础认知层（WHY）</text>
+    <text x="60" y="300" class="layerTag">技术支撑层（HOW）</text>
+    <text x="60" y="450" class="layerTag">系统机制层（HOW it works）</text>
+    <text x="60" y="600" class="layerTag">应用实践层（DO）</text>
+  </g>
+
+  <!-- 学习路径箭头（层与层之间） -->
+  <g fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M550 250 C550 260 550 260 550 270"/>
+    <path d="M550 400 C550 410 550 410 550 420"/>
+    <path d="M550 550 C550 560 550 560 550 570"/>
+  </g>
+
+  <!-- 节点：第1章（基础认知层） -->
+  <g filter="url(#shadow)">
+    <!-- 你也可以把整块变成链接：把 <g> 换成 <a href="..." target="_blank"><g>...</g></a> -->
+    <rect x="240" y="155" width="620" height="78" rx="14" fill="#ffffff"/>
+    <rect x="240" y="155" width="10" height="78" rx="10" fill="#3b82f6"/>
+    <text x="270" y="186" class="nodeTitle">第1章｜区块链技术原理概述</text>
+    <text x="270" y="210" class="nodeText">基础概念 · 去中心化 · 核心技术与架构 · 分类与应用 · 价值前景</text>
+  </g>
+
+  <!-- 技术支撑层：第2章、第3章 -->
+  <g filter="url(#shadow)">
+    <rect x="90" y="305" width="470" height="86" rx="14" fill="#ffffff"/>
+    <rect x="90" y="305" width="10" height="86" rx="10" fill="#3b82f6"/>
+    <text x="120" y="338" class="nodeTitle">第2章｜开发相关技术</text>
+    <text x="120" y="362" class="nodeText">环境与工具 · JSON / Linux 命令 · Flask 接口 · 密码学基础</text>
+    <text x="120" y="382" class="hint">（实战：加密 Web 服务端）</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="600" y="305" width="460" height="86" rx="14" fill="#ffffff"/>
+    <rect x="600" y="305" width="10" height="86" rx="10" fill="#3b82f6"/>
+    <text x="630" y="338" class="nodeTitle">第3章｜区块与账本</text>
+    <text x="630" y="362" class="nodeText">区块结构 · 链式存储 · 账本概念与实现</text>
+    <text x="630" y="382" class="hint">（实战：简单账本系统）</text>
+  </g>
+
+  <!-- 系统机制层：第4章、第5章、第6章 -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="455" width="330" height="86" rx="14" fill="#ffffff"/>
+    <rect x="70" y="455" width="10" height="86" rx="10" fill="#3b82f6"/>
+    <text x="100" y="488" class="nodeTitle">第4章｜账户与交易</text>
+    <text x="100" y="512" class="nodeText">密钥/地址 · 交易生成 · 验证与区块验证</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="420" y="455" width="320" height="86" rx="14" fill="#ffffff"/>
+    <rect x="420" y="455" width="10" height="86" rx="10" fill="#3b82f6"/>
+    <text x="450" y="488" class="nodeTitle">第5章｜节点通信</text>
+    <text x="450" y="512" class="nodeText">网络结构 · P2P/Socket · Gossip 传播 · 定时器</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="760" y="455" width="300" height="86" rx="14" fill="#ffffff"/>
+    <rect x="760" y="455" width="10" height="86" rx="10" fill="#3b82f6"/>
+    <text x="790" y="488" class="nodeTitle">第6章｜共识算法</text>
+    <text x="790" y="512" class="nodeText">共识原理与分类 · PoW 机制与实现</text>
+  </g>
+
+  <!-- 应用实践层：第7章、第8章（绿色强调实践） -->
+  <g filter="url(#shadow)">
+    <rect x="90" y="605" width="470" height="78" rx="14" fill="#ffffff"/>
+    <rect x="90" y="605" width="10" height="78" rx="10" fill="#22c55e"/>
+    <text x="120" y="636" class="nodeTitle">第7章｜智能合约</text>
+    <text x="120" y="660" class="nodeText">合约概念与特性 · 状态/模型 · 部署与调用（公有链/联盟链）</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="600" y="605" width="460" height="78" rx="14" fill="#ffffff"/>
+    <rect x="600" y="605" width="10" height="78" rx="10" fill="#22c55e"/>
+    <text x="630" y="636" class="nodeTitle">第8章｜综合实训：完整系统</text>
+    <text x="630" y="660" class="nodeText">项目式串联：需求分析 → 合约设计 → 链上验证 → 结果评估</text>
+  </g>
+
+  <!-- 关键横向关联（虚线：理解“关系”） -->
+  <g fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 6" marker-start="url(#dot)" marker-end="url(#arrow)">
+    <!-- 第2章 → 第7章：开发基础支撑合约 -->
+    <path d="M325 391 C310 470 280 535 270 605"/>
+    <!-- 第3章 → 第4章：账本支撑交易 -->
+    <path d="M830 391 C780 420 640 438 390 455"/>
+    <!-- 第5章 → 第6章：通信影响共识 -->
+    <path d="M580 541 C650 555 720 555 800 541"/>
+    <!-- 第4/6 → 第8：机制汇聚到综合实训 -->
+    <path d="M235 541 C260 590 380 610 600 640"/>
+    <path d="M910 541 C900 575 860 600 820 605"/>
+  </g>
+
+  <!-- 底部说明 -->
+  <text x="40" y="708" class="hint">
+    提示：你可以把每个章节节点改成链接（例如链接到对应章节资料/视频页）；SVG 本身可直接嵌入 HTML 或保存为 .svg 文件使用。
+  </text>
+</svg>
+
+  </div>
+
+</div>
+
 
         <p class="muted">提示：将图谱图片放在 <code>assets/image/course-map.png</code>。</p>
       </section>
