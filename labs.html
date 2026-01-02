@@ -2,13 +2,16 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>课程支持</title>
+  <title>课程支持｜区块链技术与应用</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
   <h1>课程支持</h1>
+  <p>网课资源 · 实验实训 · 真实案例</p>
   <nav>
     <a href="index.html">首页</a>
     <a href="materials.html">课程资料</a>
@@ -16,40 +19,154 @@
   </nav>
 </header>
 
-<main id="labs-container">
-  <p>正在加载实验内容...</p>
+<main>
+  <div class="layout">
+
+    <!-- ============ 左侧：本页目录 ============ -->
+    <aside class="toc">
+      <div class="toc-title">本页目录</div>
+      <a href="#videos">在线精品课程 / 视频</a>
+      <a href="#tools">工具与平台</a>
+      <a href="#labs">实验与模拟场景</a>
+      <a href="#cases">真实案例与拓展</a>
+    </aside>
+
+    <!-- ============ 右侧：内容区 ============ -->
+    <div>
+
+      <!-- ================= 视频 / 网课资源 ================= -->
+      <section class="card" id="videos">
+        <h2>🎥 在线课程与视频资源</h2>
+        <p class="muted">用于课前预习与课后巩固。你可以把链接替换为 B站 / 雨课堂 / 中国大学 MOOC / 超星等平台地址。</p>
+
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>区块链导论：基本概念与应用价值</h3>
+            <p>帮助管理学院学生先理解“区块链解决什么问题”。</p>
+            <a href="#" target="_blank">▶ 打开资源</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>智能合约入门：从合约到业务规则</h3>
+            <p>理解合约如何把“业务规则”写进链上执行。</p>
+            <a href="#" target="_blank">▶ 打开资源</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>供应链/存证/溯源：典型案例讲解</h3>
+            <p>面向管理场景的案例解析与业务流程映射。</p>
+            <a href="#" target="_blank">▶ 打开资源</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 工具与平台 ================= -->
+      <section class="card" id="tools">
+        <h2>🧰 工具与平台支持</h2>
+        <p class="muted">实验课会用到的工具入口（建议收藏）。</p>
+
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>Remix IDE（在线写合约）</h3>
+            <p>浏览器中完成 Solidity 编写、编译与部署。</p>
+            <a href="https://remix.ethereum.org" target="_blank">访问 Remix</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>MetaMask（钱包/签名）</h3>
+            <p>用于账户管理与链上交互。</p>
+            <a href="https://metamask.io" target="_blank">访问 MetaMask</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Ganache（本地测试链）</h3>
+            <p>快速搭建本地私链测试环境。</p>
+            <a href="https://trufflesuite.com/ganache/" target="_blank">访问 Ganache</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 实验与模拟场景（动态加载） ================= -->
+      <section class="card" id="labs">
+        <h2>🧪 实验与模拟场景</h2>
+        <p class="muted">下面内容来自 <code>data/labs.json</code>，你只需维护 JSON，就能自动更新页面。</p>
+
+        <div id="labs-container">
+          <p class="muted">正在加载实验内容...</p>
+        </div>
+      </section>
+
+      <!-- ================= 真实案例与拓展（可静态，也可放 JSON） ================= -->
+      <section class="card" id="cases">
+        <h2>📘 真实案例与拓展资料</h2>
+        <p class="muted">建议放你课堂里讲过的“溯源 / 存证 / 供应链协同 / 数据共享”等案例链接或报告。</p>
+
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>案例：商品溯源系统（业务流程 → 链上数据）</h3>
+            <p>从“业务需求”到“链上字段”的映射思路。</p>
+            <a href="#" target="_blank">查看案例</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>案例：电子存证（司法/合同/票据）</h3>
+            <p>理解“可信时间戳 + 不可篡改”的管理价值。</p>
+            <a href="#" target="_blank">查看案例</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>拓展：联盟链在组织协同中的应用</h3>
+            <p>多方协作、权限治理、数据共享的典型路径。</p>
+            <a href="#" target="_blank">查看资料</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
 </main>
 
+<footer>
+  <p>© 区块链技术与应用课程</p>
+</footer>
+
 <script>
-fetch("data/labs.json")
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById("labs-container");
-    container.innerHTML = "";
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("data/labs.json")
+    .then(res => {
+      if (!res.ok) throw new Error("labs.json 加载失败");
+      return res.json();
+    })
+    .then(data => {
+      const container = document.getElementById("labs-container");
+      container.innerHTML = "";
 
-    data.forEach(lab => {
-      const div = document.createElement("div");
-      div.className = "card";
+      data.forEach(lab => {
+        const div = document.createElement("div");
+        div.className = "card";
 
-      div.innerHTML = `
-        <h3>${lab.title}</h3>
-        <p><strong>难度：</strong>${lab.level}</p>
-        <p><strong>分类：</strong>${lab.category}</p>
-        <p>${lab.description}</p>
-        <div class="links">
-          ${lab.links.map(link =>
-            `<a href="${link.url}" target="_blank">${link.name}</a>`
-          ).join("")}
-        </div>
-      `;
+        div.innerHTML = `
+          <h3>${lab.title}</h3>
+          <p><strong>难度：</strong>${lab.level}</p>
+          <p><strong>分类：</strong>${lab.category}</p>
+          <p>${lab.description}</p>
+          <div class="links">
+            ${lab.links.map(link =>
+              `<a href="${link.url}" target="_blank">${link.name}</a>`
+            ).join("")}
+          </div>
+        `;
 
-      container.appendChild(div);
+        container.appendChild(div);
+      });
+    })
+    .catch(err => {
+      document.getElementById("labs-container").innerHTML =
+        "<p style='color:#dc2626'>加载失败：请检查 <code>data/labs.json</code> 路径与 JSON 格式。</p>";
+      console.error(err);
     });
-  });
+});
 </script>
 
 </body>
 </html>
-
-
-
