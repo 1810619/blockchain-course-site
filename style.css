@@ -39,14 +39,31 @@ header * {
   z-index: 1;
 }
 
+/* ===== 高级标题样式 ===== */
 header h1 {
-  margin-bottom: 6px;
+  font-size: clamp(36px, 4.5vw, 48px);
+  font-weight: 700;
+  margin-bottom: 10px;
+
+  /* 渐变文字 */
+  background: linear-gradient(90deg, #ffffff, #c7d2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* 微弱发光 */
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+
+  /* 动画 */
+  animation: fadeInUp 0.8s ease-out;
 }
 
 header p {
-  margin-top: 0;
+  font-size: clamp(15px, 2vw, 18px);
   opacity: 0.9;
+  letter-spacing: 0.5px;
+  animation: fadeInUp 1s ease-out;
 }
+
 
 nav {
   display: flex;
@@ -76,6 +93,17 @@ main {
 
 section {
   margin-bottom: 28px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ================== 通用卡片 ================== */
@@ -524,6 +552,7 @@ header {
   position: relative;
   padding: 90px 20px 40px; /* 顶部留空间给导航 */
 }
+
 
 
 
