@@ -526,4 +526,27 @@ footer {
   height: auto;
   display: block;
 }
+/* ========== 课程图谱样式 ========== */
+.image-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-top: 12px;
+}
+
+.svg-wrapper {
+  width: 100%;
+  overflow-x: auto;  /* 小屏幕横向滚动 */
+  padding-bottom: 6px;
+}
+
+.svg-wrapper svg {
+  min-width: 900px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 
