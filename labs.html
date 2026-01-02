@@ -27,6 +27,7 @@
       <div class="toc-title">本页目录</div>
       <a href="#videos">在线精品课程 / 视频</a>
       <a href="#tools">工具与平台</a>
+      <a href="#tools-visual">零基础可视化</a>
       <a href="#labs">实验与模拟场景</a>
       <a href="#cases">真实案例与拓展</a>
     </aside>
@@ -64,43 +65,120 @@
             <a href="https://www.bilibili.com/video/BV1Vt411X7JF/?spm_id_from=333.337.search-card.all.click" target="_blank">▶ 打开资源</a>
           </div>
 
-         <div class="resource-card">
+          <div class="resource-card">
             <h3>深入浅出讲web3：从比特币到区块链</h3>
             <p>【清华大学区块链课】深入浅出讲web3：从比特币到区块链（全14讲）</p>
             <a href="https://www.bilibili.com/video/BV1mL411a7jo/?spm_id_from=333.337.search-card.all.click" target="_blank">▶ 打开资源</a>
           </div>
 
-         <div class="resource-card">
+          <div class="resource-card">
             <h3>《区块链与加密数字货币》</h3>
             <p>【清华大学】《区块链与加密数字货币》比特币的底层逻辑</p>
             <a href="https://www.bilibili.com/video/BV13o4y1j7VL/?spm_id_from=333.337.search-card.all.click" target="_blank">▶ 打开资源</a>
           </div>
-          
         </div>
       </section>
 
-      <!-- ================= 工具与平台 ================= -->
+      <!-- ================= 工具与平台支持（已融合：可视化/拖拽 + 在线IDE + 本地链 + 联盟链） ================= -->
       <section class="card" id="tools">
         <h2>🧰 工具与平台支持</h2>
-        <p class="muted">实验课会用到的工具入口（建议收藏）。</p>
+        <p class="muted">按“零基础 → 代码实操 → 工程化 → 联盟链”的路线组织，课堂可分组使用。</p>
 
+        <!-- ============ 0基础 / 可视化（拖拽） ============ -->
+        <h3 id="tools-visual">🧩 零基础可视化 / 拖拽式（不写或少写代码）</h3>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>区块链虚拟仿真实验平台（机制可视化）</h3>
+            <p>适合原理课：交易→打包→出块→共识→广播→记账，全流程可视化演示与实验报告。</p>
+            <a href="#" target="_blank">课程内平台入口（可替换链接）</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Blockly / 积木式合约逻辑（教学用）</h3>
+            <p>用“积木”拼接逻辑，理解状态变量、条件、事件、权限控制，再过渡到 Solidity。</p>
+            <a href="#" target="_blank">示例/本地部署入口（可替换链接）</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>区块浏览器（理解链上数据）</h3>
+            <p>帮助学生把“交易、区块、合约、事件日志”对应到真实页面，建立链上认知。</p>
+            <a href="https://sepolia.etherscan.io/" target="_blank">示例：Sepolia 浏览器</a>
+          </div>
+        </div>
+
+        <!-- ============ 在线学习 + 快速上手 ============ -->
+        <h3>🎮 入门练习（边学边练）</h3>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>CryptoZombies（游戏化学 Solidity）</h3>
+            <p>零基础友好：关卡式学习 Solidity 与合约交互逻辑，适合课前预习/作业。</p>
+            <a href="https://cryptozombies.io/" target="_blank">访问 CryptoZombies</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>课堂练习仓库（模板/作业/指导书）</h3>
+            <p>存放课堂代码模板、作业脚手架、实验指导书（README + 截图 + 评分点）。</p>
+            <a href="#" target="_blank">你的课程仓库链接（可替换）</a>
+          </div>
+        </div>
+
+        <!-- ============ 在线写合约（最推荐） ============ -->
+        <h3>🧾 在线合约 IDE（写代码但不折腾环境）</h3>
         <div class="resource-grid">
           <div class="resource-card">
             <h3>Remix IDE（在线写合约）</h3>
-            <p>浏览器中完成 Solidity 编写、编译与部署。</p>
+            <p>浏览器中完成 Solidity 编写、编译、部署、调试。最适合课堂演示与新手实操。</p>
             <a href="https://remix.ethereum.org" target="_blank">访问 Remix</a>
           </div>
 
           <div class="resource-card">
-            <h3>MetaMask（钱包/签名）</h3>
-            <p>用于账户管理与链上交互。</p>
-            <a href="https://metamask.io" target="_blank">访问 MetaMask</a>
+            <h3>ChainIDE（中文友好在线 IDE）</h3>
+            <p>中文界面更友好，适合学生快速写合约、部署与查看交易结果。</p>
+            <a href="https://chainide.com/" target="_blank">访问 ChainIDE</a>
           </div>
 
           <div class="resource-card">
+            <h3>MetaMask（钱包/签名）</h3>
+            <p>用于账户管理、签名与链上交互；配合 Remix 部署到测试网。</p>
+            <a href="https://metamask.io" target="_blank">访问 MetaMask</a>
+          </div>
+        </div>
+
+        <!-- ============ 本地工程化（进阶） ============ -->
+        <h3>⚙️ 本地工程化开发（适合高年级/竞赛）</h3>
+        <div class="resource-grid">
+          <div class="resource-card">
             <h3>Ganache（本地测试链）</h3>
-            <p>快速搭建本地私链测试环境。</p>
+            <p>快速搭建本地私链测试环境，配合 Truffle/Hardhat 使用。</p>
             <a href="https://trufflesuite.com/ganache/" target="_blank">访问 Ganache</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Hardhat（主流开发框架）</h3>
+            <p>脚手架+测试+部署脚本，适合课程项目：拍卖、投票、NFT、简单 DApp。</p>
+            <a href="https://hardhat.org/" target="_blank">访问 Hardhat</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>Truffle（经典框架）</h3>
+            <p>合约编译、迁移部署、测试一体化，适合教学与对比 Hardhat。</p>
+            <a href="https://trufflesuite.com/truffle/" target="_blank">访问 Truffle</a>
+          </div>
+        </div>
+
+        <!-- ============ 联盟链（Fabric 等） ============ -->
+        <h3>🏢 联盟链 / 真实业务仿真（课程拓展）</h3>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>Hyperledger Fabric（联盟链）</h3>
+            <p>适合“多组织协作、权限治理、隐私与合规”场景；可做供应链/存证/协同。</p>
+            <a href="https://www.hyperledger.org/use/fabric" target="_blank">了解 Fabric</a>
+          </div>
+
+          <div class="resource-card">
+            <h3>区块链云实验（按课程选用）</h3>
+            <p>如果你有云实验平台入口，可放在这里：一键创建网络/部署链码/生成实验报告。</p>
+            <a href="#" target="_blank">你的云实验入口（可替换）</a>
           </div>
         </div>
       </section>
@@ -189,9 +267,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
-
-
-
-
-
-
