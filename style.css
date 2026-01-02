@@ -549,4 +549,79 @@ footer {
   margin: 0 auto;
 }
 
+/* ========== 课程目录：卡片网格（每章一个块） ========== */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.chapter-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.chapter-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.10);
+}
+
+.chapter-card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.chapter-card__tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.chapter-card__title {
+  margin: 0;
+  font-size: 16px;
+  color: #0f172a;
+  line-height: 1.35;
+}
+
+.chapter-card__list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.chapter-card__list li {
+  margin: 6px 0;
+}
+
+.chapter-card__actions {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* 小屏：自动变为一列 */
+@media (max-width: 860px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
