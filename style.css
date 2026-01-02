@@ -491,14 +491,13 @@ html {
 
 /* ===== 顶部导航栏（居中） ===== */
 .top-nav {
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 16px;
   display: flex;
+  justify-content: center;
   gap: 28px;
   z-index: 10;
 }
+
 
 .top-nav a {
   color: #ffffff;
@@ -525,6 +524,7 @@ header {
   position: relative;
   padding: 90px 20px 40px; /* 顶部留空间给导航 */
 }
+
 
 
 
