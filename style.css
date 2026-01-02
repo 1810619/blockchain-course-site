@@ -346,9 +346,10 @@ th {
 .dot.exam      { background: #f97316; }
 
 /* ================== 甘特图 ================== */
+/* ===== 甘特图：更清晰的行高、刻度、条形 ===== */
 .gantt-wrap {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 14px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
@@ -358,13 +359,14 @@ th {
   grid-template-columns: 180px 1fr;
   gap: 10px;
   margin-bottom: 10px;
+  align-items: center;
 }
 
 .gantt-corner {
-  font-weight: 600;
-  text-align: right;
-  padding-right: 10px;
-  color: #334155;
+  font-weight: 700;
+  text-align: left;
+  color: #0f172a;
+  padding-left: 6px;
 }
 
 .gantt-weeks {
@@ -377,43 +379,91 @@ th {
 
 .gantt-weeks span {
   text-align: center;
-  padding: 2px 0;
-  border-radius: 4px;
+  padding: 4px 0;
+  border-radius: 6px;
   background: #f8fafc;
   border: 1px solid #eef2f7;
 }
 
+/* 主体网格：1列标签 + 16列周次 */
 .gantt {
   display: grid;
   grid-template-columns: 180px repeat(16, 1fr);
-  gap: 6px;
+  gap: 8px 6px;            /* 行间距/列间距 */
 }
 
+/* 每一行：使用 contents 让 label 和 bar 对齐到同一行 */
 .gantt-row {
   display: contents;
 }
 
 .label {
+  align-self: center;
+  text-align: left;
   font-weight: 600;
-  text-align: right;
-  padding-right: 10px;
   color: #0f172a;
-  line-height: 1.6;
+  padding-left: 6px;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
+/* 条形：固定高度 + 居中 + 文字清晰 */
 .bar {
-  color: #fff;
-  padding: 6px 8px;
-  border-radius: 8px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
   font-size: 13px;
-  text-align: center;
+  font-weight: 600;
+
+  color: #fff;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.10);
 }
 
+/* 颜色沿用你之前的：理论蓝 / 实验绿 */
 .bar.theory { background: #2563eb; }
-.bar.lab { background: #16a34a; }
+.bar.lab    { background: #16a34a; }
+
+/* 图例 */
+.gantt-legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  justify-content: flex-end;
+  color: #475569;
+  font-size: 13px;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.theory { background: #2563eb; }
+.legend-dot.lab    { background: #16a34a; }
+
+/* 小屏优化：标签列变窄，字体更紧凑 */
+@media (max-width: 860px) {
+  .gantt-header { grid-template-columns: 140px 1fr; }
+  .gantt { grid-template-columns: 140px repeat(16, 1fr); }
+  .bar { height: 32px; font-size: 12px; }
+  .label { font-size: 13px; }
+}
+
 
 /* ===== 左侧目录 TOC 布局 ===== */
 .layout {
@@ -552,6 +602,7 @@ header {
   position: relative;
   padding: 90px 20px 40px; /* 顶部留空间给导航 */
 }
+
 
 
 
