@@ -639,3 +639,100 @@ footer {
   padding: 20px;
   color: #666;
 }
+/* ================== 页面背景增强（追加到文件末尾） ================== */
+body {
+  /* 轻微渐变 + 细腻底色 */
+  background:
+    radial-gradient(900px 500px at 10% 10%, rgba(37, 99, 235, 0.12), transparent 60%),
+    radial-gradient(800px 420px at 90% 0%, rgba(34, 197, 94, 0.10), transparent 55%),
+    radial-gradient(900px 520px at 70% 90%, rgba(249, 115, 22, 0.08), transparent 55%),
+    linear-gradient(180deg, #f8fafc 0%, #f3f4f6 100%);
+}
+
+/* 背景纹理（非常淡） */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.12) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ================== 卡片质感升级（不改结构） ================== */
+.card {
+  border: 1px solid rgba(229, 231, 235, 0.95);
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.06),
+    0 2px 8px rgba(15, 23, 42, 0.04);
+  backdrop-filter: blur(6px);
+}
+
+.resource-card {
+  background: rgba(249, 250, 251, 0.88);
+  border: 1px solid rgba(229, 231, 235, 0.95);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+/* 目录更高级：轻微玻璃态 + hover 高亮 */
+.toc {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.toc a {
+  border: 1px solid transparent;
+  transition: background 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+}
+
+.toc a:hover {
+  background: rgba(37, 99, 235, 0.07);
+  border-color: rgba(37, 99, 235, 0.20);
+  transform: translateX(2px);
+}
+
+/* 标题下加一条细分割线（更有设计感） */
+.card h2 {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.card h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(37,99,235,0.9), rgba(37,99,235,0.15));
+}
+
+/* 按钮更精致一点（保留你原来的颜色体系） */
+.button,
+.links a,
+.btn {
+  box-shadow: 0 10px 18px rgba(37, 99, 235, 0.18);
+}
+
+.btn.btn-lab {
+  box-shadow: 0 10px 18px rgba(22, 163, 74, 0.18);
+}
+
+/* 无障碍：减少动效时自动关闭动画/位移 */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
