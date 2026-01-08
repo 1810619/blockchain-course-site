@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>第3章拓展资料</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+a {
+    text-decoration: none;
+    color: #0070c9;
+}
+ul {
+    line-height: 1.8em;
+}
+.folder {
+    font-weight: bold;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>第 3 章 · 拓展资料</h2>
+<p>点击文件或文件夹查看内容：</p>
+
+<ul id="file-list">加载中……</ul>
+
+<script>
+// 你的 GitHub 仓库信息
+const user = "1810619";      
+const repo = "blockchain-course-site/codes";            
+const path = "chapter3";              // 当前文件夹路径
+
+// 调用 GitHub API 获取目录结构
+async function fetchFiles(folderPath, element) {
+    const api = `https://api.github.com/repos/${user}/${repo}/contents/${folderPath}`;
+    const res = await fetch(api);
+    const data = await res.json();
+
+    data.forEach(item => {
+        const li = document.createElement("li");
+
+        if (item.type === "file") {
+            li.innerHTML = `<a href="${item.path}" target="_blank">${item.name}</a>`;
+        } else if (item.type === "dir") {
+            li.innerHTML = `<span class="folder">📁 ${item.name}</span>`;
+            const subUl = document.createElement("ul");
+            li.appendChild(subUl);
+            fetchFiles(item.path, subUl);  // 递归列出子文件夹
+        }
+
+        element.appendChild(li);
+    });
+}
+
+// 加载 chapter3 目录
+fetchFiles(path, document.getElementById("file-list"));
+</script>
+
+</body>
+</html>
