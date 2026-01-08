@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>区块链课程作业</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      line-height: 1.7;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 25px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 6px;
+      background-color: #f0f8ff;
+      font-size: 18px;
+      display: none;
+    }
+    .correct { color: green; font-weight: bold; }
+    .wrong { color: red; font-weight: bold; }
+  </style>
+</head>
+
+<body>
+
+<h1>区块链课程作业（自动判卷版）</h1>
+
+<form id="quizForm">
+
+  <!-- 单选题 1 -->
+  <div class="question">
+    <p><strong>1. 以下哪个属性不在区块中保存？（5 分）</strong></p>
+    <label><input type="radio" name="q1" value="A"> A. 父块哈希值</label><br>
+    <label><input type="radio" name="q1" value="B"> B. 随机数</label><br>
+    <label><input type="radio" name="q1" value="C"> C. 父块区块头</label><br>
+    <label><input type="radio" name="q1" value="D"> D. 默克尔根</label>
+  </div>
+
+  <!-- 单选题 2 -->
+  <div class="question">
+    <p><strong>2. 当节点 A、B 产生交易时，交易将被哪些节点保存？（5 分）</strong></p>
+    <label><input type="radio" name="q2" value="A"> A. 被所有节点保存</label><br>
+    <label><input type="radio" name="q2" value="B"> B. 仅被 A、B 保存</label><br>
+    <label><input type="radio" name="q2" value="C"> C. 被其他 48 个节点保存</label><br>
+    <label><input type="radio" name="q2" value="D"> D. 被中心节点保存</label>
+  </div>
+
+  <!-- 单选题 3 -->
+  <div class="question">
+    <p><strong>3. 区块之间如何实现连接？（5 分）</strong></p>
+    <label><input type="radio" name="q3" value="A"> A. 节点索引记录表</label><br>
+    <label><input type="radio" name="q3" value="B"> B. 父块哈希值</label><br>
+    <label><input type="radio" name="q3" value="C"> C. 区块体中的交易内容</label><br>
+    <label><input type="radio" name="q3" value="D"> D. 中心节点</label>
+  </div>
+
+  <!-- 单选题 4 -->
+  <div class="question">
+    <p><strong>4. 区块相当于纸质账本的什么？（5 分）</strong></p>
+    <label><input type="radio" name="q4" value="A"> A. 账页</label><br>
+    <label><input type="radio" name="q4" value="B"> B. 账目</label><br>
+    <label><input type="radio" name="q4" value="C"> C. 关键信息</label><br>
+    <label><input type="radio" name="q4" value="D"> D. 账本</label>
+  </div>
+
+  <button type="button" onclick="gradeQuiz()" style="padding:10px 20px;font-size:16px;">提交试卷</button>
+
+</form>
+
+<!-- 成绩显示区 -->
+<div id="result" class="result"></div>
+
+<script>
+function gradeQuiz() {
+  // 正确答案
+  const answers = {
+    q1: "C",
+    q2: "A",
+    q3: "B",
+    q4: "A"
+  };
+
+  let score = 0;
+  let output = "";
+
+  for (let q in answers) {
+    const userAnswer = document.querySelector(`input[name="${q}"]:checked`);
+    if (!userAnswer) {
+      output += `<p>${q}：未作答</p>`;
+      continue;
+    }
+    if (userAnswer.value === answers[q]) {
+      score += 5;
+      output += `<p>${q}：<span class="correct">✔ 正确</span></p>`;
+    } else {
+      output += `<p>${q}：<span class="wrong">✘ 错误</span>（正确答案：${answers[q]}）</p>`;
+    }
+  }
+
+  const resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `<h3>你的得分：${score} / 20</h3>` + output;
+}
+</script>
+
+</body>
+</html>
