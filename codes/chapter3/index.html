@@ -31,8 +31,8 @@ ul {
 <script>
 // 你的 GitHub 仓库信息
 const user = "1810619";      
-const repo = "blockchain-course-site/tree/main/codes";            
-const path = "chapter3";              // 当前文件夹路径
+const repo = "blockchain-course-site";            
+const path = "codes/chapter3";              // 当前文件夹路径
 
 // 调用 GitHub API 获取目录结构
 async function fetchFiles(folderPath, element) {
@@ -62,4 +62,5 @@ fetchFiles(path, document.getElementById("file-list"));
 
 </body>
 </html>
+
 
