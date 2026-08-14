@@ -94,9 +94,10 @@ header nav a:hover {
 
 /* ================== 主体布局 ================== */
 main {
-  max-width: 900px;
+  width: calc(100% - 48px);
+  max-width: 1500px;
   margin: 30px auto;
-  padding: 0 20px;
+  padding: 0;
 }
 
 section { margin-bottom: 28px; }
@@ -104,7 +105,7 @@ section { margin-bottom: 28px; }
 /* 通用卡片 */
 .card {
   background: white;
-  padding: 20px;
+  padding: 26px;
   margin-bottom: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
@@ -435,9 +436,13 @@ th {
 /* ================== 左侧目录 TOC 布局 ================== */
 .layout {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 18px;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 26px;
   align-items: start;
+}
+
+.content {
+  min-width: 0;
 }
 
 .toc {
@@ -626,7 +631,10 @@ th {
 }
 
 @media (max-width: 720px) {
-  main { margin: 18px auto; }
+  main {
+    width: calc(100% - 24px);
+    margin: 18px auto;
+  }
   header { padding: 54px 16px 36px; }
   header nav { gap: 16px; }
   header nav a { font-size: 14px; }
