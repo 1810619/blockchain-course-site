@@ -1,1 +1,20 @@
-
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>案例详情｜区块链技术与应用</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="style.css"></head>
+<body id="top"><header><h1>区块链技术与应用</h1><p>案例学习 · 真实业务 · 技术机制 · 应用边界</p><nav><a href="index.html">首页</a><a href="materials.html">课程资料</a><a href="cases.html">案例库</a><a href="labs.html">课程支持</a></nav></header>
+<main><div class="layout"><aside class="toc case-toc"><div class="toc-title">案例目录</div><a href="#case-story">案例正文</a><a href="#case-visuals">案例图示</a><a href="#case-tasks">案例任务</a><a href="#case-downloads">学习资源</a><a href="#case-references">参考资料</a><a href="cases.html">返回案例库</a><a href="#top">回到顶部</a></aside><div class="content"><div id="case-loading" class="card"><p class="muted">正在加载案例...</p></div><div id="case-content" hidden></div></div></div></main><footer><p>© 区块链技术与应用课程</p></footer>
+<script>
+const params=new URLSearchParams(location.search); const id=(params.get('id')||'').toUpperCase();
+function escapeHtml(s){return String(s||'').replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));}
+Promise.all([fetch('data/cases.json').then(r=>r.json()),fetch(`data/cases/${id}.json`).then(r=>{if(!r.ok)throw new Error('not found');return r.json();})]).then(([all,c])=>{
+ document.title=`${c.id} ${c.cardTitle}｜案例库`;
+ const related=all.filter(x=>x.layer===c.layer&&x.id!==c.id).slice(0,3);
+ const el=document.getElementById('case-content'); el.hidden=false; document.getElementById('case-loading').remove();
+ el.innerHTML=`<section class="card case-hero"><div class="case-breadcrumb"><a href="cases.html">案例库</a><span>›</span><span>${c.layerLabel}</span><span>›</span><strong>${c.id}</strong></div><div class="case-hero__head"><div><span class="case-layer-badge ${c.layer}">${c.layerLabel} · ${c.goal}</span><h1>${c.title}</h1><p class="case-hero-question">${c.question}</p></div><div class="case-meta-panel"><div><span>建议时间</span><strong>${c.time}</strong></div><div><span>关联章节</span><strong>${c.chapters.join(' / ')}</strong></div></div></div><div class="case-tags">${c.tags.map(t=>`<span>${t}</span>`).join('')}</div></section>
+ <section class="card case-story" id="case-story"><h2>案例正文</h2>${c.bodyHtml}</section>
+ <section class="card" id="case-visuals"><h2>案例图示</h2><div class="case-visual-grid">${c.visuals.map((v,i)=>`<figure><img src="${v.src}" alt="${escapeHtml(v.alt)}"><figcaption>图${i+1} ${c.id}案例图示</figcaption></figure>`).join('')}</div></section>
+ <section class="card" id="case-tasks"><h2>案例任务</h2><div class="task-meta">${Object.entries(c.taskMeta||{}).map(([k,v])=>`<div><span>${escapeHtml(k)}</span><strong>${escapeHtml(v)}</strong></div>`).join('')}</div><ol class="case-task-list">${c.tasks.map(q=>`<li>${escapeHtml(q)}</li>`).join('')}</ol>${c.conclusion?`<div class="case-conclusion"><strong>小组结论</strong><p>${escapeHtml(c.conclusion)}</p></div>`:''}</section>
+ <section class="card" id="case-downloads"><h2>学习资源</h2><p class="muted">网页可直接阅读；需要课堂打印或提交作业时，可下载对应文件。</p><div class="download-grid">${c.downloads.map(d=>`<a class="download-card" href="${d.url}" download><span>${d.kind.toUpperCase()}</span><strong>${d.name}</strong></a>`).join('')}</div></section>
+ <section class="card" id="case-references"><h2>参考资料</h2><ol class="reference-list">${c.references.map(r=>`<li>${escapeHtml(r.label)} <a href="${r.url}" target="_blank" rel="noopener">打开原始网页 ↗</a></li>`).join('')}</ol></section>
+ ${related.length?`<section class="card"><h2>同层拓展案例</h2><div class="related-cases">${related.map(r=>`<a href="case.html?id=${r.id}"><span>${r.id}</span><strong>${r.cardTitle}</strong><small>${r.question}</small></a>`).join('')}</div></section>`:''}`;
+}).catch(err=>{document.getElementById('case-loading').innerHTML='<h2>未找到案例</h2><p>请返回案例库重新选择。</p><a class="btn" href="cases.html">返回案例库</a>';});
+</script></body></html>

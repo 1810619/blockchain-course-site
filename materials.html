@@ -1,87 +1,73 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>课程资料｜区块链技术与应用</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<title>课程资料｜区块链技术与应用</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
-
 <body>
-
 <header>
-  <h1>区块链技术与应用</h1>
-  <p>课程资料 · 进度总览 · 目录导航</p>
-
-  <nav>
-    <a href="index.html">首页</a>
-    <a href="materials.html">课程资料</a>
-    <a href="cases.html">案例库</a>
-    <a href="labs.html">课程支持</a>
-  </nav>
+<h1>区块链技术与应用</h1>
+<p>课程资料 · 进度总览 · 目录导航</p>
+<nav>
+<a href="index.html">首页</a>
+<a href="materials.html">课程资料</a>
+<a href="cases.html">案例库</a><a href="labs.html">课程支持</a>
+</nav>
 </header>
-
 <main>
-  <div class="layout">
-
-    <!-- ============ 左侧：本页目录栏（TOC） ============ -->
-    <aside class="toc">
-      <div class="toc-title">本页目录</div>
-      <a href="#map">课程图谱</a>
-      <a href="#gantt">教学进度</a>
-      <a href="#catalog">课程内容目录</a>
-      <a href="#ch-preface">前言</a>
-      <a href="#ch1">第1章 原理概述</a>
-      <a href="#ch2">第2章 开发相关技术</a>
-      <a href="#ch3">第3章 区块与账本</a>
-      <a href="#ch4">第4章 账户与交易</a>
-      <a href="#ch5">第5章 节点通信</a>
-      <a href="#ch6">第6章 共识算法</a>
-      <a href="#ch7">第7章 智能合约</a>
-      <a href="#ch8">第8章 综合实训</a>
-      <a href="#book">参考教材</a>
-      <a href="#top">回到顶部</a>
-    </aside>
-
-    <!-- ============ 右侧：页面内容 ============ -->
-    <div class="content" id="top">
-
-      <!-- ================= 课程图谱 ================= -->
-      <section class="card" id="map">
-        <h2>课程图谱</h2>
-        <p class="muted">
+<div class="layout">
+<!-- ============ 左侧：本页目录栏（TOC） ============ -->
+<aside class="toc">
+<div class="toc-title">本页目录</div>
+<a href="#map">课程图谱</a>
+<a href="#gantt">教学进度</a>
+<a href="#catalog">课程内容目录</a><a href="#case-map">章节关联案例</a>
+<a href="#ch-preface">前言</a>
+<a href="#ch1">第1章 原理概述</a>
+<a href="#ch2">第2章 开发相关技术</a>
+<a href="#ch3">第3章 区块与账本</a>
+<a href="#ch4">第4章 账户与交易</a>
+<a href="#ch5">第5章 节点通信</a>
+<a href="#ch6">第6章 共识算法</a>
+<a href="#ch7">第7章 智能合约</a>
+<a href="#ch8">第8章 综合实训</a>
+<a href="#book">参考教材</a>
+<a href="#top">回到顶部</a>
+</aside>
+<!-- ============ 右侧：页面内容 ============ -->
+<div class="content" id="top">
+<!-- ================= 课程图谱 ================= -->
+<section class="card" id="map">
+<h2>课程图谱</h2>
+<p class="muted">
           课程知识结构图（概念—技术—应用），帮助同学快速建立整体框架。
         </p>
-
-        <div class="image-card">
-
-  <!-- 课程知识图谱 SVG -->
-  <div class="svg-wrapper">
-    <svg viewBox="0 0 1100 720" width="100%" height="auto" role="img" aria-label="区块链技术与应用课程知识图谱"
-     xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- 背景淡渐变 -->
-    <linearGradient id="bgGrad" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f7fafc"/>
-    </linearGradient>
-
-    <!-- 卡片阴影 -->
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.12"/>
-    </filter>
-
-    <!-- 箭头 -->
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
-    </marker>
-
-    <!-- 小圆点 -->
-    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6">
-      <circle cx="5" cy="5" r="3" fill="#94a3b8"/>
-    </marker>
-
-    <style>
+<div class="image-card">
+<!-- 课程知识图谱 SVG -->
+<div class="svg-wrapper">
+<svg aria-label="区块链技术与应用课程知识图谱" height="auto" role="img" viewbox="0 0 1100 720" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- 背景淡渐变 -->
+<lineargradient id="bgGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ffffff"></stop>
+<stop offset="100%" stop-color="#f7fafc"></stop>
+</lineargradient>
+<!-- 卡片阴影 -->
+<filter height="140%" id="shadow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="6" flood-color="#0f172a" flood-opacity="0.12" stddeviation="8"></fedropshadow>
+</filter>
+<!-- 箭头 -->
+<marker id="arrow" markerheight="10" markerwidth="10" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"></path>
+</marker>
+<!-- 小圆点 -->
+<marker id="dot" markerheight="6" markerwidth="6" refx="5" refy="5" viewbox="0 0 10 10">
+<circle cx="5" cy="5" fill="#94a3b8" r="3"></circle>
+</marker>
+<style>
       .title { font: 700 26px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; fill:#0f172a; }
       .subtitle { font: 400 14px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; fill:#475569; }
       .layerTag { font: 700 13px -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; fill:#0f172a; }
@@ -91,453 +77,395 @@
       .stroke { stroke:#cbd5e1; stroke-width:1; }
       .link { cursor:pointer; }
     </style>
-  </defs>
-
-  <!-- 背景 -->
-  <rect x="0" y="0" width="1100" height="720" fill="url(#bgGrad)"/>
-
-  <!-- 标题区 -->
-  <text x="40" y="52" class="title">区块链技术与应用｜课程知识图谱</text>
-  <text x="40" y="78" class="subtitle">从“认知 → 技术 → 机制 → 应用”递进，形成面向管理场景的理解与实践能力</text>
-
-  <!-- 右上角图例 -->
-  <g transform="translate(820,34)">
-    <rect x="0" y="0" width="240" height="74" rx="12" fill="#ffffff" filter="url(#shadow)"/>
-    <circle cx="18" cy="24" r="6" fill="#3b82f6"/>
-    <text x="34" y="28" class="hint">理论模块</text>
-    <circle cx="18" cy="48" r="6" fill="#22c55e"/>
-    <text x="34" y="52" class="hint">实践/实验模块</text>
-    <path d="M170 26 L220 26" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
-    <text x="170" y="52" class="hint">学习路径</text>
-  </g>
-
-  <!-- 分层背景板（四层） -->
-  <g>
-    <rect x="40" y="120" width="1020" height="130" rx="16" fill="#eff6ff"/>
-    <rect x="40" y="270" width="1020" height="130" rx="16" fill="#ecfeff"/>
-    <rect x="40" y="420" width="1020" height="130" rx="16" fill="#f0fdf4"/>
-    <rect x="40" y="570" width="1020" height="120" rx="16" fill="#fff7ed"/>
-
-    <text x="60" y="150" class="layerTag">基础认知层（WHY）</text>
-    <text x="60" y="300" class="layerTag">技术支撑层（HOW）</text>
-    <text x="60" y="450" class="layerTag">系统机制层（HOW it works）</text>
-    <text x="60" y="600" class="layerTag">应用实践层（DO）</text>
-  </g>
-
-  <!-- 学习路径箭头（层与层之间） -->
-  <g fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)">
-    <path d="M550 250 C550 260 550 260 550 270"/>
-    <path d="M550 400 C550 410 550 410 550 420"/>
-    <path d="M550 550 C550 560 550 560 550 570"/>
-  </g>
-
-  <!-- 节点：第1章（基础认知层） -->
-  <g filter="url(#shadow)">
-    <!-- 你也可以把整块变成链接：把 <g> 换成 <a href="..." target="_blank"><g>...</g></a> -->
-    <rect x="240" y="155" width="620" height="78" rx="14" fill="#ffffff"/>
-    <rect x="240" y="155" width="10" height="78" rx="10" fill="#3b82f6"/>
-    <text x="270" y="186" class="nodeTitle">第1章｜区块链技术原理概述</text>
-    <text x="270" y="210" class="nodeText">基础概念 · 去中心化 · 核心技术与架构 · 分类与应用 · 价值前景</text>
-  </g>
-
-  <!-- 技术支撑层：第2章、第3章 -->
-  <g filter="url(#shadow)">
-    <rect x="90" y="305" width="470" height="86" rx="14" fill="#ffffff"/>
-    <rect x="90" y="305" width="10" height="86" rx="10" fill="#3b82f6"/>
-    <text x="120" y="338" class="nodeTitle">第2章｜开发相关技术</text>
-    <text x="120" y="362" class="nodeText">环境与工具 · JSON / Linux 命令 · Flask 接口 · 密码学基础</text>
-    <text x="120" y="382" class="hint">（实战：加密 Web 服务端）</text>
-  </g>
-
-  <g filter="url(#shadow)">
-    <rect x="600" y="305" width="460" height="86" rx="14" fill="#ffffff"/>
-    <rect x="600" y="305" width="10" height="86" rx="10" fill="#3b82f6"/>
-    <text x="630" y="338" class="nodeTitle">第3章｜区块与账本</text>
-    <text x="630" y="362" class="nodeText">区块结构 · 链式存储 · 账本概念与实现</text>
-    <text x="630" y="382" class="hint">（实战：简单账本系统）</text>
-  </g>
-
-  <!-- 系统机制层：第4章、第5章、第6章 -->
-  <g filter="url(#shadow)">
-    <rect x="70" y="455" width="330" height="86" rx="14" fill="#ffffff"/>
-    <rect x="70" y="455" width="10" height="86" rx="10" fill="#3b82f6"/>
-    <text x="100" y="488" class="nodeTitle">第4章｜账户与交易</text>
-    <text x="100" y="512" class="nodeText">密钥/地址 · 交易生成 · 验证与区块验证</text>
-  </g>
-
-  <g filter="url(#shadow)">
-    <rect x="420" y="455" width="320" height="86" rx="14" fill="#ffffff"/>
-    <rect x="420" y="455" width="10" height="86" rx="10" fill="#3b82f6"/>
-    <text x="450" y="488" class="nodeTitle">第5章｜节点通信</text>
-    <text x="450" y="512" class="nodeText">网络结构 · P2P/Socket · Gossip 传播 · 定时器</text>
-  </g>
-
-  <g filter="url(#shadow)">
-    <rect x="760" y="455" width="300" height="86" rx="14" fill="#ffffff"/>
-    <rect x="760" y="455" width="10" height="86" rx="10" fill="#3b82f6"/>
-    <text x="790" y="488" class="nodeTitle">第6章｜共识算法</text>
-    <text x="790" y="512" class="nodeText">共识原理与分类 · PoW 机制与实现</text>
-  </g>
-
-  <!-- 应用实践层：第7章、第8章（绿色强调实践） -->
-  <g filter="url(#shadow)">
-    <rect x="90" y="605" width="470" height="78" rx="14" fill="#ffffff"/>
-    <rect x="90" y="605" width="10" height="78" rx="10" fill="#22c55e"/>
-    <text x="120" y="636" class="nodeTitle">第7章｜智能合约</text>
-    <text x="120" y="660" class="nodeText">合约概念与特性 · 状态/模型 · 部署与调用（公有链/联盟链）</text>
-  </g>
-
-  <g filter="url(#shadow)">
-    <rect x="600" y="605" width="460" height="78" rx="14" fill="#ffffff"/>
-    <rect x="600" y="605" width="10" height="78" rx="10" fill="#22c55e"/>
-    <text x="630" y="636" class="nodeTitle">第8章｜综合实训：完整系统</text>
-    <text x="630" y="660" class="nodeText">项目式串联：需求分析 → 合约设计 → 链上验证 → 结果评估</text>
-  </g>
-
-  <!-- 关键横向关联（虚线：理解“关系”） -->
-  <g fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 6" marker-start="url(#dot)" marker-end="url(#arrow)">
-    <!-- 第2章 → 第7章：开发基础支撑合约 -->
-    <path d="M325 391 C310 470 280 535 270 605"/>
-    <!-- 第3章 → 第4章：账本支撑交易 -->
-    <path d="M830 391 C780 420 640 438 390 455"/>
-    <!-- 第5章 → 第6章：通信影响共识 -->
-    <path d="M580 541 C650 555 720 555 800 541"/>
-    <!-- 第4/6 → 第8：机制汇聚到综合实训 -->
-    <path d="M235 541 C260 590 380 610 600 640"/>
-    <path d="M910 541 C900 575 860 600 820 605"/>
-  </g>
-
+</defs>
+<!-- 背景 -->
+<rect fill="url(#bgGrad)" height="720" width="1100" x="0" y="0"></rect>
+<!-- 标题区 -->
+<text class="title" x="40" y="52">区块链技术与应用｜课程知识图谱</text>
+<text class="subtitle" x="40" y="78">从“认知 → 技术 → 机制 → 应用”递进，形成面向管理场景的理解与实践能力</text>
+<!-- 右上角图例 -->
+<g transform="translate(820,34)">
+<rect fill="#ffffff" filter="url(#shadow)" height="74" rx="12" width="240" x="0" y="0"></rect>
+<circle cx="18" cy="24" fill="#3b82f6" r="6"></circle>
+<text class="hint" x="34" y="28">理论模块</text>
+<circle cx="18" cy="48" fill="#22c55e" r="6"></circle>
+<text class="hint" x="34" y="52">实践/实验模块</text>
+<path d="M170 26 L220 26" marker-end="url(#arrow)" stroke="#94a3b8" stroke-width="2"></path>
+<text class="hint" x="170" y="52">学习路径</text>
+</g>
+<!-- 分层背景板（四层） -->
+<g>
+<rect fill="#eff6ff" height="130" rx="16" width="1020" x="40" y="120"></rect>
+<rect fill="#ecfeff" height="130" rx="16" width="1020" x="40" y="270"></rect>
+<rect fill="#f0fdf4" height="130" rx="16" width="1020" x="40" y="420"></rect>
+<rect fill="#fff7ed" height="120" rx="16" width="1020" x="40" y="570"></rect>
+<text class="layerTag" x="60" y="150">基础认知层（WHY）</text>
+<text class="layerTag" x="60" y="300">技术支撑层（HOW）</text>
+<text class="layerTag" x="60" y="450">系统机制层（HOW it works）</text>
+<text class="layerTag" x="60" y="600">应用实践层（DO）</text>
+</g>
+<!-- 学习路径箭头（层与层之间） -->
+<g fill="none" marker-end="url(#arrow)" stroke="#94a3b8" stroke-width="2">
+<path d="M550 250 C550 260 550 260 550 270"></path>
+<path d="M550 400 C550 410 550 410 550 420"></path>
+<path d="M550 550 C550 560 550 560 550 570"></path>
+</g>
+<!-- 节点：第1章（基础认知层） -->
+<g filter="url(#shadow)">
+<!-- 你也可以把整块变成链接：把 <g> 换成 <a href="..." target="_blank"><g>...</g></a> -->
+<rect fill="#ffffff" height="78" rx="14" width="620" x="240" y="155"></rect>
+<rect fill="#3b82f6" height="78" rx="10" width="10" x="240" y="155"></rect>
+<text class="nodeTitle" x="270" y="186">第1章｜区块链技术原理概述</text>
+<text class="nodeText" x="270" y="210">基础概念 · 去中心化 · 核心技术与架构 · 分类与应用 · 价值前景</text>
+</g>
+<!-- 技术支撑层：第2章、第3章 -->
+<g filter="url(#shadow)">
+<rect fill="#ffffff" height="86" rx="14" width="470" x="90" y="305"></rect>
+<rect fill="#3b82f6" height="86" rx="10" width="10" x="90" y="305"></rect>
+<text class="nodeTitle" x="120" y="338">第2章｜开发相关技术</text>
+<text class="nodeText" x="120" y="362">环境与工具 · JSON / Linux 命令 · Flask 接口 · 密码学基础</text>
+<text class="hint" x="120" y="382">（实战：加密 Web 服务端）</text>
+</g>
+<g filter="url(#shadow)">
+<rect fill="#ffffff" height="86" rx="14" width="460" x="600" y="305"></rect>
+<rect fill="#3b82f6" height="86" rx="10" width="10" x="600" y="305"></rect>
+<text class="nodeTitle" x="630" y="338">第3章｜区块与账本</text>
+<text class="nodeText" x="630" y="362">区块结构 · 链式存储 · 账本概念与实现</text>
+<text class="hint" x="630" y="382">（实战：简单账本系统）</text>
+</g>
+<!-- 系统机制层：第4章、第5章、第6章 -->
+<g filter="url(#shadow)">
+<rect fill="#ffffff" height="86" rx="14" width="330" x="70" y="455"></rect>
+<rect fill="#3b82f6" height="86" rx="10" width="10" x="70" y="455"></rect>
+<text class="nodeTitle" x="100" y="488">第4章｜账户与交易</text>
+<text class="nodeText" x="100" y="512">密钥/地址 · 交易生成 · 验证与区块验证</text>
+</g>
+<g filter="url(#shadow)">
+<rect fill="#ffffff" height="86" rx="14" width="320" x="420" y="455"></rect>
+<rect fill="#3b82f6" height="86" rx="10" width="10" x="420" y="455"></rect>
+<text class="nodeTitle" x="450" y="488">第5章｜节点通信</text>
+<text class="nodeText" x="450" y="512">网络结构 · P2P/Socket · Gossip 传播 · 定时器</text>
+</g>
+<g filter="url(#shadow)">
+<rect fill="#ffffff" height="86" rx="14" width="300" x="760" y="455"></rect>
+<rect fill="#3b82f6" height="86" rx="10" width="10" x="760" y="455"></rect>
+<text class="nodeTitle" x="790" y="488">第6章｜共识算法</text>
+<text class="nodeText" x="790" y="512">共识原理与分类 · PoW 机制与实现</text>
+</g>
+<!-- 应用实践层：第7章、第8章（绿色强调实践） -->
+<g filter="url(#shadow)">
+<rect fill="#ffffff" height="78" rx="14" width="470" x="90" y="605"></rect>
+<rect fill="#22c55e" height="78" rx="10" width="10" x="90" y="605"></rect>
+<text class="nodeTitle" x="120" y="636">第7章｜智能合约</text>
+<text class="nodeText" x="120" y="660">合约概念与特性 · 状态/模型 · 部署与调用（公有链/联盟链）</text>
+</g>
+<g filter="url(#shadow)">
+<rect fill="#ffffff" height="78" rx="14" width="460" x="600" y="605"></rect>
+<rect fill="#22c55e" height="78" rx="10" width="10" x="600" y="605"></rect>
+<text class="nodeTitle" x="630" y="636">第8章｜综合实训：完整系统</text>
+<text class="nodeText" x="630" y="660">项目式串联：需求分析 → 合约设计 → 链上验证 → 结果评估</text>
+</g>
+<!-- 关键横向关联（虚线：理解“关系”） -->
+<g fill="none" marker-end="url(#arrow)" marker-start="url(#dot)" stroke="#94a3b8" stroke-dasharray="6 6" stroke-width="2">
+<!-- 第2章 → 第7章：开发基础支撑合约 -->
+<path d="M325 391 C310 470 280 535 270 605"></path>
+<!-- 第3章 → 第4章：账本支撑交易 -->
+<path d="M830 391 C780 420 640 438 390 455"></path>
+<!-- 第5章 → 第6章：通信影响共识 -->
+<path d="M580 541 C650 555 720 555 800 541"></path>
+<!-- 第4/6 → 第8：机制汇聚到综合实训 -->
+<path d="M235 541 C260 590 380 610 600 640"></path>
+<path d="M910 541 C900 575 860 600 820 605"></path>
+</g>
 </svg>
-
-  </div>
-
 </div>
-
-
-      </section>
-
+</div>
+</section>
 <!-- ================= 教学进度甘特图 ================= -->
 <section class="card" id="gantt">
-  <h2>课程教学进度安排</h2>
-  <p class="muted">蓝色为理论课，绿色为实验课；横向表示第 1–16 周。</p>
-
-  <div class="gantt-wrap">
-    <div class="gantt-header">
-      <span class="gantt-corner">模块</span>
-      <div class="gantt-weeks">
-        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
-        <span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
-      </div>
-    </div>
-
-    <div class="gantt">
-
-      <div class="gantt-row">
-        <span class="label">第1章 原理概述</span>
-        <div class="bar theory" style="grid-column: 2 / 3;">第1周</div>
-      </div>
-
-      <div class="gantt-row">
-        <span class="label">第2章 开发相关技术</span>
-        <div class="bar theory" style="grid-column: 3 / 5;">第2–3周</div>
-      </div>
-
-      <div class="gantt-row">
-        <span class="label">实验一：环境搭建与程序实现</span>
-        <div class="bar lab" style="grid-column: 5 / 6;">第4周</div>
-      </div>
-
-      <div class="gantt-row">
-        <span class="label">第3章 区块与账本</span>
-        <div class="bar theory" style="grid-column: 6 / 7;">第5周</div>
-      </div>
-
-      <div class="gantt-row">
-        <span class="label">第4章 账户与交易</span>
-        <div class="bar theory" style="grid-column: 7 / 9;">第6–7周</div>
-      </div>
-
-      <div class="gantt-row">
-        <span class="label">实验二：Web服务端与账本系统</span>
-        <div class="bar lab" style="grid-column: 9 / 10;">第8周</div>
-      </div>
-
-      <div class="gantt-row">
-        <span class="label">第5章 节点通信</span>
-        <div class="bar theory" style="grid-column: 10 / 12;">第9–10周</div>
-      </div>
-
-      <div class="gantt-row">
-        <span class="label">第6章 共识算法（一）</span>
-        <div class="bar theory" style="grid-column: 12 / 13;">第11周</div>
-      </div>
-
-      <div class="gantt-row">
-        <span class="label">实验三：账户/交易与区块链系统</span>
-        <div class="bar lab" style="grid-column: 13 / 14;">第12周</div>
-      </div>
-
-      <div class="gantt-row">
-        <span class="label">第6章 共识算法（二）</span>
-        <div class="bar theory" style="grid-column: 14 / 15;">第13周</div>
-      </div>
-
-      <div class="gantt-row">
-        <span class="label">实验四：P2P通信与区块链网络</span>
-        <div class="bar lab" style="grid-column: 15 / 16;">第14周</div>
-      </div>
-
-      <div class="gantt-row">
-        <span class="label">第7章 智能合约</span>
-        <div class="bar theory" style="grid-column: 16 / 18;">第15–16周</div>
-      </div>
-
-    </div>
-
-    <div class="gantt-legend">
-      <span class="legend-item"><i class="legend-dot theory"></i>理论课</span>
-      <span class="legend-item"><i class="legend-dot lab"></i>实验课</span>
-    </div>
-  </div>
+<h2>课程教学进度安排</h2>
+<p class="muted">蓝色为理论课，绿色为实验课；横向表示第 1–16 周。</p>
+<div class="gantt-wrap">
+<div class="gantt-header">
+<span class="gantt-corner">模块</span>
+<div class="gantt-weeks">
+<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+<span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+</div>
+</div>
+<div class="gantt">
+<div class="gantt-row">
+<span class="label">第1章 原理概述</span>
+<div class="bar theory" style="grid-column: 2 / 3;">第1周</div>
+</div>
+<div class="gantt-row">
+<span class="label">第2章 开发相关技术</span>
+<div class="bar theory" style="grid-column: 3 / 5;">第2–3周</div>
+</div>
+<div class="gantt-row">
+<span class="label">实验一：环境搭建与程序实现</span>
+<div class="bar lab" style="grid-column: 5 / 6;">第4周</div>
+</div>
+<div class="gantt-row">
+<span class="label">第3章 区块与账本</span>
+<div class="bar theory" style="grid-column: 6 / 7;">第5周</div>
+</div>
+<div class="gantt-row">
+<span class="label">第4章 账户与交易</span>
+<div class="bar theory" style="grid-column: 7 / 9;">第6–7周</div>
+</div>
+<div class="gantt-row">
+<span class="label">实验二：Web服务端与账本系统</span>
+<div class="bar lab" style="grid-column: 9 / 10;">第8周</div>
+</div>
+<div class="gantt-row">
+<span class="label">第5章 节点通信</span>
+<div class="bar theory" style="grid-column: 10 / 12;">第9–10周</div>
+</div>
+<div class="gantt-row">
+<span class="label">第6章 共识算法（一）</span>
+<div class="bar theory" style="grid-column: 12 / 13;">第11周</div>
+</div>
+<div class="gantt-row">
+<span class="label">实验三：账户/交易与区块链系统</span>
+<div class="bar lab" style="grid-column: 13 / 14;">第12周</div>
+</div>
+<div class="gantt-row">
+<span class="label">第6章 共识算法（二）</span>
+<div class="bar theory" style="grid-column: 14 / 15;">第13周</div>
+</div>
+<div class="gantt-row">
+<span class="label">实验四：P2P通信与区块链网络</span>
+<div class="bar lab" style="grid-column: 15 / 16;">第14周</div>
+</div>
+<div class="gantt-row">
+<span class="label">第7章 智能合约</span>
+<div class="bar theory" style="grid-column: 16 / 18;">第15–16周</div>
+</div>
+</div>
+<div class="gantt-legend">
+<span class="legend-item"><i class="legend-dot theory"></i>理论课</span>
+<span class="legend-item"><i class="legend-dot lab"></i>实验课</span>
+</div>
+</div>
 </section>
-
-      <!-- ================= 课程目录 + 四按钮 ================= -->
-      <section class="card" id="catalog">
-  <div class="catalog-head">
-    <div>
-      <h2 style="margin:0;">课程内容目录</h2>
-      <p class="muted" style="margin:8px 0 0;">
+<!-- ================= 课程目录 + 四按钮 ================= -->
+<section class="card" id="catalog">
+<div class="catalog-head">
+<div>
+<h2 style="margin:0;">课程内容目录</h2>
+<p class="muted" style="margin:8px 0 0;">
         每个章节提供：课程视频 / 作业 / 拓展资料 / 模拟场景演练入口。
       </p>
-    </div>
-  </div>
-
-  <!-- ✅ 每章一个块：两列卡片布局（小屏自动一列） -->
-  <div class="catalog-grid">
-
-    <!-- 前言 -->
-    <article class="chapter-card" id="ch-preface">
-      <div class="chapter-card__head">
-        <div>
-          <div class="chapter-card__tag">导读</div>
-          <h3 class="chapter-card__title">前言</h3>
-        </div>
-      </div>
-      <div class="chapter-card__actions">
-        <a class="btn" href="#" target="_blank">课程视频</a>
-        <a class="btn" href="homeworks/homework0.html" target="_blank">作业</a>
-        <a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter0" target="_blank">拓展资料</a>
-        <a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
-      </div>
-    </article>
-
-    <!-- 第1章 -->
-    <article class="chapter-card" id="ch1">
-      <div class="chapter-card__head">
-        <div>
-          <div class="chapter-card__tag">理论</div>
-          <h3 class="chapter-card__title">第1章 区块链技术原理概述</h3>
-        </div>
-      </div>
-
-      <ul class="chapter-card__list">
-        <li>1.1 区块链基础概念（含 1.1.1–1.1.2）</li>
-        <li>1.2 核心技术与典型架构（含 1.2.1–1.2.6）</li>
-        <li>1.3 技术特性；1.4 分类；1.5 应用领域；1.6 价值前景</li>
-        <li class="muted">本章小结 / 本章习题</li>
-      </ul>
-
-      <div class="chapter-card__actions">
-        <a class="btn" href="#" target="_blank">课程视频</a>
-        <a class="btn" href="homeworks/homework1.html" target="_blank">作业</a>
-        <a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter1" target="_blank">拓展资料</a>
-        <a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
-      </div>
-    </article>
-
-    <!-- 第2章 -->
-    <article class="chapter-card" id="ch2">
-      <div class="chapter-card__head">
-        <div>
-          <div class="chapter-card__tag">理论 + 实战</div>
-          <h3 class="chapter-card__title">第2章 区块链开发相关技术介绍</h3>
-        </div>
-      </div>
-
-      <ul class="chapter-card__list">
-        <li>2.1 开发环境准备（硬件/软件）</li>
-        <li>2.2 数据格式与 Linux 基础命令（JSON/curl/tree/jq）</li>
-        <li>2.3 Python Web 服务端（Flask）</li>
-        <li>2.4 密码学基础（哈希/非对称加密）</li>
-        <li class="muted">实战练习：构建具备加密功能的 Web 服务端</li>
-      </ul>
-
-      <div class="chapter-card__actions">
-        <a class="btn" href="#" target="_blank">课程视频</a>
-        <a class="btn" href="homeworks/homework2.html" target="_blank">作业</a>
-        <a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter2" target="_blank">拓展资料</a>
-        <a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
-      </div>
-    </article>
-
-    <!-- 第3章 -->
-    <article class="chapter-card" id="ch3">
-      <div class="chapter-card__head">
-        <div>
-          <div class="chapter-card__tag">理论 + 实战</div>
-          <h3 class="chapter-card__title">第3章 区块链的区块与账本</h3>
-        </div>
-      </div>
-
-      <ul class="chapter-card__list">
-        <li>3.1 区块与链的定义（区块概念/链式存储/区块联系）</li>
-        <li>3.2 区块链中的账本（概念/实现）</li>
-        <li class="muted">实战练习：构建简单的区块链账本系统</li>
-      </ul>
-
-      <div class="chapter-card__actions">
-        <a class="btn" href="https://www.bilibili.com/video/BV1a2r6BBEWz/?vd_source=0749d11a61ff4eb5fe63c9f40121e980" target="_blank">课程视频</a>
-        <a class="btn" href="homeworks/homework3.html" target="_blank">作业</a>
-        <a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter3" target="_blank">拓展资料</a>
-        <a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
-      </div>
-    </article>
-
-    <!-- 第4章 -->
-    <article class="chapter-card" id="ch4">
-      <div class="chapter-card__head">
-        <div>
-          <div class="chapter-card__tag">理论 + 实战</div>
-          <h3 class="chapter-card__title">第4章 区块链的账户和交易</h3>
-        </div>
-      </div>
-
-      <ul class="chapter-card__list">
-        <li>4.1 账户（密钥生成/地址生成）</li>
-        <li>4.2 交易（要素/产生过程/验证方法/区块验证）</li>
-        <li class="muted">实战：交易对象创建 / 签名验签 / 示例系统</li>
-      </ul>
-
-      <div class="chapter-card__actions">
-        <a class="btn" href="#" target="_blank">课程视频</a>
-        <a class="btn" href="homeworks/homework4.html" target="_blank">作业</a>
-        <a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter4" target="_blank">拓展资料</a>
-        <a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
-      </div>
-    </article>
-
-    <!-- 第5章 -->
-    <article class="chapter-card" id="ch5">
-      <div class="chapter-card__head">
-        <div>
-          <div class="chapter-card__tag">理论 + 实战</div>
-          <h3 class="chapter-card__title">第5章 区块链中节点间的通信</h3>
-        </div>
-      </div>
-
-      <ul class="chapter-card__list">
-        <li>5.1 区块链网络（公有/联盟/私有；NetworkX 绘制）</li>
-        <li>5.2 P2P 网络通信（概念/Socket/实现）</li>
-        <li>5.3 数据传播方式（Gossip；APScheduler 定时器）</li>
-        <li class="muted">实战：绘制网络 / 搭建 Gossip 网络</li>
-      </ul>
-
-      <div class="chapter-card__actions">
-        <a class="btn" href="#" target="_blank">课程视频</a>
-        <a class="btn" href="homeworks/homework5.html" target="_blank">作业</a>
-        <a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter5" target="_blank">拓展资料</a>
-        <a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
-      </div>
-    </article>
-
-    <!-- 第6章 -->
-    <article class="chapter-card" id="ch6">
-      <div class="chapter-card__head">
-        <div>
-          <div class="chapter-card__tag">理论 + 实战</div>
-          <h3 class="chapter-card__title">第6章 区块链中的共识算法</h3>
-        </div>
-      </div>
-
-      <ul class="chapter-card__list">
-        <li>6.1 共识算法原理与分类</li>
-        <li>6.2 PoW 算法（定义/优缺点/目标值/实现）</li>
-        <li class="muted">实战：搭建基于 PoW 的区块链网络</li>
-      </ul>
-
-      <div class="chapter-card__actions">
-        <a class="btn" href="#" target="_blank">课程视频</a>
-        <a class="btn" href="homeworks/homework6.html" target="_blank">作业</a>
-        <a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter6" target="_blank">拓展资料</a>
-        <a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
-      </div>
-    </article>
-
-    <!-- 第7章 -->
-    <article class="chapter-card" id="ch7">
-      <div class="chapter-card__head">
-        <div>
-          <div class="chapter-card__tag">理论 + 实战</div>
-          <h3 class="chapter-card__title">第7章 区块链中的智能合约</h3>
-        </div>
-      </div>
-
-      <ul class="chapter-card__list">
-        <li>7.1 智能合约概念与特性</li>
-        <li>7.2 区块链与智能合约关系；7.3 工作原理（状态/模型）</li>
-        <li>7.4 部署与调用（公有链/联盟链）</li>
-        <li class="muted">实战：公有链/联盟链部署智能合约</li>
-      </ul>
-
-      <div class="chapter-card__actions">
-        <a class="btn" href="#" target="_blank">课程视频</a>
-        <a class="btn" href="homeworks/homework7.html" target="_blank">作业</a>
-        <a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter7" target="_blank">拓展资料</a>
-        <a class="btn btn-lab" href="https://remix.ethereum.org" target="_blank">模拟场景演练</a>
-      </div>
-    </article>
-
-    <!-- 第8章 -->
-    <article class="chapter-card" id="ch8">
-      <div class="chapter-card__head">
-        <div>
-          <div class="chapter-card__tag">综合实践</div>
-          <h3 class="chapter-card__title">第8章 综合实训：构建完整的区块链系统</h3>
-        </div>
-      </div>
-
-      <ul class="chapter-card__list">
-        <li>综合实训：构建完整区块链系统（项目式）</li>
-        <li class="muted">建议：小组项目 / 过程记录 / 结果展示</li>
-      </ul>
-
-      <div class="chapter-card__actions">
-        <a class="btn" href="#" target="_blank">课程视频</a>
-        <a class="btn" href="homeworks/homework8.html" target="_blank">作业</a>
-        <a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter8" target="_blank">拓展资料</a>
-        <a class="btn btn-lab" href="https://remix.ethereum.org" target="_blank">模拟场景演练</a>
-      </div>
-    </article>
-
-  </div>
+</div>
+</div>
+<!-- ✅ 每章一个块：两列卡片布局（小屏自动一列） -->
+<div class="catalog-grid">
+<!-- 前言 -->
+<article class="chapter-card" id="ch-preface">
+<div class="chapter-card__head">
+<div>
+<div class="chapter-card__tag">导读</div>
+<h3 class="chapter-card__title">前言</h3>
+</div>
+</div>
+<div class="chapter-card__actions">
+<a class="btn" href="#" target="_blank">课程视频</a>
+<a class="btn" href="homeworks/homework0.html" target="_blank">作业</a>
+<a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter0" target="_blank">拓展资料</a>
+<a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
+</div>
+</article>
+<!-- 第1章 -->
+<article class="chapter-card" id="ch1">
+<div class="chapter-card__head">
+<div>
+<div class="chapter-card__tag">理论</div>
+<h3 class="chapter-card__title">第1章 区块链技术原理概述</h3>
+</div>
+</div>
+<ul class="chapter-card__list">
+<li>1.1 区块链基础概念（含 1.1.1–1.1.2）</li>
+<li>1.2 核心技术与典型架构（含 1.2.1–1.2.6）</li>
+<li>1.3 技术特性；1.4 分类；1.5 应用领域；1.6 价值前景</li>
+<li class="muted">本章小结 / 本章习题</li>
+</ul>
+<div class="chapter-card__actions">
+<a class="btn" href="#" target="_blank">课程视频</a>
+<a class="btn" href="homeworks/homework1.html" target="_blank">作业</a>
+<a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter1" target="_blank">拓展资料</a>
+<a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
+</div>
+</article>
+<!-- 第2章 -->
+<article class="chapter-card" id="ch2">
+<div class="chapter-card__head">
+<div>
+<div class="chapter-card__tag">理论 + 实战</div>
+<h3 class="chapter-card__title">第2章 区块链开发相关技术介绍</h3>
+</div>
+</div>
+<ul class="chapter-card__list">
+<li>2.1 开发环境准备（硬件/软件）</li>
+<li>2.2 数据格式与 Linux 基础命令（JSON/curl/tree/jq）</li>
+<li>2.3 Python Web 服务端（Flask）</li>
+<li>2.4 密码学基础（哈希/非对称加密）</li>
+<li class="muted">实战练习：构建具备加密功能的 Web 服务端</li>
+</ul>
+<div class="chapter-card__actions">
+<a class="btn" href="#" target="_blank">课程视频</a>
+<a class="btn" href="homeworks/homework2.html" target="_blank">作业</a>
+<a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter2" target="_blank">拓展资料</a>
+<a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
+</div>
+</article>
+<!-- 第3章 -->
+<article class="chapter-card" id="ch3">
+<div class="chapter-card__head">
+<div>
+<div class="chapter-card__tag">理论 + 实战</div>
+<h3 class="chapter-card__title">第3章 区块链的区块与账本</h3>
+</div>
+</div>
+<ul class="chapter-card__list">
+<li>3.1 区块与链的定义（区块概念/链式存储/区块联系）</li>
+<li>3.2 区块链中的账本（概念/实现）</li>
+<li class="muted">实战练习：构建简单的区块链账本系统</li>
+</ul>
+<div class="chapter-card__actions">
+<a class="btn" href="https://www.bilibili.com/video/BV1a2r6BBEWz/?vd_source=0749d11a61ff4eb5fe63c9f40121e980" target="_blank">课程视频</a>
+<a class="btn" href="homeworks/homework3.html" target="_blank">作业</a>
+<a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter3" target="_blank">拓展资料</a>
+<a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
+</div>
+</article>
+<!-- 第4章 -->
+<article class="chapter-card" id="ch4">
+<div class="chapter-card__head">
+<div>
+<div class="chapter-card__tag">理论 + 实战</div>
+<h3 class="chapter-card__title">第4章 区块链的账户和交易</h3>
+</div>
+</div>
+<ul class="chapter-card__list">
+<li>4.1 账户（密钥生成/地址生成）</li>
+<li>4.2 交易（要素/产生过程/验证方法/区块验证）</li>
+<li class="muted">实战：交易对象创建 / 签名验签 / 示例系统</li>
+</ul>
+<div class="chapter-card__actions">
+<a class="btn" href="#" target="_blank">课程视频</a>
+<a class="btn" href="homeworks/homework4.html" target="_blank">作业</a>
+<a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter4" target="_blank">拓展资料</a>
+<a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
+</div>
+</article>
+<!-- 第5章 -->
+<article class="chapter-card" id="ch5">
+<div class="chapter-card__head">
+<div>
+<div class="chapter-card__tag">理论 + 实战</div>
+<h3 class="chapter-card__title">第5章 区块链中节点间的通信</h3>
+</div>
+</div>
+<ul class="chapter-card__list">
+<li>5.1 区块链网络（公有/联盟/私有；NetworkX 绘制）</li>
+<li>5.2 P2P 网络通信（概念/Socket/实现）</li>
+<li>5.3 数据传播方式（Gossip；APScheduler 定时器）</li>
+<li class="muted">实战：绘制网络 / 搭建 Gossip 网络</li>
+</ul>
+<div class="chapter-card__actions">
+<a class="btn" href="#" target="_blank">课程视频</a>
+<a class="btn" href="homeworks/homework5.html" target="_blank">作业</a>
+<a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter5" target="_blank">拓展资料</a>
+<a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
+</div>
+</article>
+<!-- 第6章 -->
+<article class="chapter-card" id="ch6">
+<div class="chapter-card__head">
+<div>
+<div class="chapter-card__tag">理论 + 实战</div>
+<h3 class="chapter-card__title">第6章 区块链中的共识算法</h3>
+</div>
+</div>
+<ul class="chapter-card__list">
+<li>6.1 共识算法原理与分类</li>
+<li>6.2 PoW 算法（定义/优缺点/目标值/实现）</li>
+<li class="muted">实战：搭建基于 PoW 的区块链网络</li>
+</ul>
+<div class="chapter-card__actions">
+<a class="btn" href="#" target="_blank">课程视频</a>
+<a class="btn" href="homeworks/homework6.html" target="_blank">作业</a>
+<a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter6" target="_blank">拓展资料</a>
+<a class="btn btn-lab" href="https://www.programiz.com/python-programming/online-compiler/" target="_blank">模拟场景演练</a>
+</div>
+</article>
+<!-- 第7章 -->
+<article class="chapter-card" id="ch7">
+<div class="chapter-card__head">
+<div>
+<div class="chapter-card__tag">理论 + 实战</div>
+<h3 class="chapter-card__title">第7章 区块链中的智能合约</h3>
+</div>
+</div>
+<ul class="chapter-card__list">
+<li>7.1 智能合约概念与特性</li>
+<li>7.2 区块链与智能合约关系；7.3 工作原理（状态/模型）</li>
+<li>7.4 部署与调用（公有链/联盟链）</li>
+<li class="muted">实战：公有链/联盟链部署智能合约</li>
+</ul>
+<div class="chapter-card__actions">
+<a class="btn" href="#" target="_blank">课程视频</a>
+<a class="btn" href="homeworks/homework7.html" target="_blank">作业</a>
+<a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter7" target="_blank">拓展资料</a>
+<a class="btn btn-lab" href="https://remix.ethereum.org" target="_blank">模拟场景演练</a>
+</div>
+</article>
+<!-- 第8章 -->
+<article class="chapter-card" id="ch8">
+<div class="chapter-card__head">
+<div>
+<div class="chapter-card__tag">综合实践</div>
+<h3 class="chapter-card__title">第8章 综合实训：构建完整的区块链系统</h3>
+</div>
+</div>
+<ul class="chapter-card__list">
+<li>综合实训：构建完整区块链系统（项目式）</li>
+<li class="muted">建议：小组项目 / 过程记录 / 结果展示</li>
+</ul>
+<div class="chapter-card__actions">
+<a class="btn" href="#" target="_blank">课程视频</a>
+<a class="btn" href="homeworks/homework8.html" target="_blank">作业</a>
+<a class="btn" href="https://github.com/1810619/blockchain-course-site/tree/main/codes/chapter8" target="_blank">拓展资料</a>
+<a class="btn btn-lab" href="https://remix.ethereum.org" target="_blank">模拟场景演练</a>
+</div>
+</article>
+</div>
 </section>
-
-      <!-- ================= 参考教材 ================= -->
-      <section class="card" id="book">
-        <h2>参考教材</h2>
-        <p>
+<section class="card" id="case-map">
+<h2>章节关联案例</h2>
+<p class="muted">案例库与章节内容双向关联。学习技术知识后，可进入相应案例分析其业务作用与适用边界。</p>
+<div class="chapter-case-grid">
+<div><strong>原理概述 / 账本</strong><p><a href="case.html?id=B01">B01 深圳电子发票</a> · <a href="case.html?id=T01">T01 Food Trust</a> · <a href="case.html?id=T05">T05 协鑫碳链</a></p></div>
+<div><strong>密码学 / 账户交易</strong><p><a href="case.html?id=B02">B02 腾讯至信链</a> · <a href="case.html?id=T03">T03 数字版权</a> · <a href="case.html?id=B05">B05 Everledger</a></p></div>
+<div><strong>节点通信 / 共识</strong><p><a href="case.html?id=T04">T04 物流协同</a> · <a href="case.html?id=T08">T08 安全治理</a> · <a href="case.html?id=C04">C04 TradeLens</a></p></div>
+<div><strong>智能合约 / 综合实训</strong><p><a href="case.html?id=T02">T02 双链通</a> · <a href="case.html?id=C01">C01 供应链融资</a> · <a href="case.html?id=C03">C03 雄安政府采购</a></p></div>
+</div>
+<a class="btn" href="cases.html">进入完整三级案例库</a>
+</section>
+<!-- ================= 参考教材 ================= -->
+<section class="card" id="book">
+<h2>参考教材</h2>
+<p>
           本课程主要参考教材为《<strong>区块链技术原理与实践（微课版）</strong>》，朱利华、陶亚辉 主编。
           教材采用“理论结合实践”的教学方式，配套程序设计实战练习，有助于学生在理解原理的同时提升动手能力。
         </p>
-      </section>
-
-    </div><!-- /content -->
-  </div><!-- /layout -->
+</section>
+</div><!-- /content -->
+</div><!-- /layout -->
 </main>
-
 <footer>
-  <p>© 区块链技术与应用课程</p>
+<p>© 区块链技术与应用课程</p>
 </footer>
-
 </body>
 </html>
