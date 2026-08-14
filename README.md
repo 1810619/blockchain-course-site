@@ -13,3 +13,18 @@
 - 课程支持页将原“真实案例”调整为“外部案例与拓展阅读”，并加入课程案例库入口
 
 注意：教师指导书、参考答案、教学PPT和事实核验表没有放进公开网站目录。完整教师材料位于总下载包的 `teacher_resources_private`，不要上传到公开 GitHub 仓库。
+
+
+## 综合实践沙盘入口（新增）
+
+本版新增：
+- `sandbox.html`：供应链区块链业务决策与交易沙盘综合实践导学页
+- `labs.html`：在“实验与模拟场景”中增加综合实践入口
+- `downloads/sandbox/student_taskbook.docx`：学生实验任务书
+- `downloads/sandbox/student_manual.docx`：学生使用说明
+
+说明：
+- GitHub Pages 仅作为课程网站、实验导学和资料下载入口。
+- FastAPI 沙盘仍运行在教师电脑或后续独立服务器上。
+- 课堂采用教师现场公布局域网地址的方式，学生可在 `sandbox.html` 输入地址并进入。
+- 教师指导书、参考答案等教师材料仍不要上传到公开 GitHub Pages。

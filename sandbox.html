@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>供应链区块链业务沙盘｜区块链技术与应用</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<h1>区块链技术与应用</h1>
+<p>综合实践 · 供应链区块链业务决策与交易沙盘</p>
+<nav>
+<a href="index.html">首页</a>
+<a href="materials.html">课程资料</a>
+<a href="cases.html">案例库</a>
+<a href="labs.html">课程支持</a>
+</nav>
+</header>
+
+<main>
+<div class="layout">
+
+<aside class="toc">
+<div class="toc-title">本页目录</div>
+<a href="#intro">实验简介</a>
+<a href="#goals">学习目标</a>
+<a href="#roles">角色与场景</a>
+<a href="#flow">实验流程</a>
+<a href="#materials">实验材料</a>
+<a href="#entry">课堂入口</a>
+<a href="#after">实验后思考</a>
+<a href="labs.html">返回课程支持</a>
+</aside>
+
+<div class="content">
+
+<section class="card sandbox-hero-card" id="intro">
+<span class="sandbox-badge">综合实践</span>
+<h2>供应链区块链业务决策与交易沙盘</h2>
+<p class="sandbox-lead">
+本实验不是区块链编程训练，而是面向管理类学生的轻量化业务实践。
+你将以供应商、制造商、经销商或银行中的一个角色，与同组成员共同完成一条供应链业务流程，
+并观察关键业务事件如何形成链上交易、如何经过网络确认进入区块。
+</p>
+
+<div class="sandbox-principle">
+<strong>实验主线</strong>
+<span>先作出业务判断，再进行系统操作；操作后同时观察业务状态、资金变化和链上记录。</span>
+</div>
+</section>
+
+<section class="card" id="goals">
+<h2>学习目标</h2>
+<div class="sandbox-goal-grid">
+<div>
+<strong>技术理解</strong>
+<p>理解交易生成、待确认、网络确认、区块形成以及哈希链之间的关系。</p>
+</div>
+<div>
+<strong>业务分析</strong>
+<p>理解采购、融资、履约、验收和付款为什么需要跨主体可信记录。</p>
+</div>
+<div>
+<strong>实践应用</strong>
+<p>通过角色决策判断区块链、智能合约在真实管理场景中的作用与边界。</p>
+</div>
+</div>
+</section>
+
+<section class="card" id="roles">
+<h2>角色与业务场景</h2>
+<p>
+某制造企业需要向上游供应商采购关键零部件，并在完成生产后向经销商销售成品。
+供应商在获得正式采购订单后可以选择是否向银行申请订单融资。
+四类角色围绕同一业务链协同完成交易。
+</p>
+
+<div class="sandbox-role-grid">
+<div class="sandbox-role-card">
+<span>S</span>
+<strong>供应商</strong>
+<p>发布上游报价；决定是否申请订单融资；确认发货。</p>
+</div>
+<div class="sandbox-role-card">
+<span>M</span>
+<strong>制造商</strong>
+<p>处理采购报价；验收货物；观察智能合约；发布下游销售报价。</p>
+</div>
+<div class="sandbox-role-card">
+<span>R</span>
+<strong>经销商</strong>
+<p>处理销售报价；确认收货；支付下游销售货款。</p>
+</div>
+<div class="sandbox-role-card">
+<span>B</span>
+<strong>银行</strong>
+<p>结合正式订单与链上信息审核供应商融资申请。</p>
+</div>
+</div>
+</section>
+
+<section class="card" id="flow">
+<h2>实验流程</h2>
+<p class="muted">每完成一个阶段，都应记录“业务发生了什么、资金是否变化、是否形成链上交易”。</p>
+
+<div class="sandbox-process">
+<div><span>01</span><strong>上游报价</strong><small>供应商发布报价</small></div>
+<div><span>02</span><strong>采购决策</strong><small>制造商接受或拒绝</small></div>
+<div><span>03</span><strong>订单融资</strong><small>供应商可选申请，银行审核</small></div>
+<div><span>04</span><strong>发货验收</strong><small>供应商发货，制造商验收</small></div>
+<div><span>05</span><strong>智能合约</strong><small>满足条件后自动付款</small></div>
+<div><span>06</span><strong>下游销售</strong><small>报价、成交、发货、收货、付款</small></div>
+<div><span>07</span><strong>网络确认</strong><small>教师确认 pending 交易</small></div>
+<div><span>08</span><strong>区块分析</strong><small>浏览区块并观察篡改验证</small></div>
+</div>
+</section>
+
+<section class="card" id="materials">
+<h2>实验材料</h2>
+<p>建议先下载任务书，再进入课堂沙盘。任务书用于记录决策理由、业务状态、资金变化和链上结果。</p>
+
+<div class="sandbox-download-grid">
+<a href="downloads/sandbox/student_taskbook.docx">
+<span>实验任务书</span>
+<strong>供应链区块链业务沙盘实验任务书</strong>
+<small>课堂填写 · 决策、观察与分析记录</small>
+</a>
+<a href="downloads/sandbox/student_manual.docx">
+<span>使用说明</span>
+<strong>学生使用说明</strong>
+<small>首次加入、角色操作、链上记录与实验结果说明</small>
+</a>
+</div>
+</section>
+
+<section class="card sandbox-entry-card" id="entry">
+<div class="sandbox-entry-head">
+<div>
+<span class="sandbox-badge">课堂开放时使用</span>
+<h2>进入课堂沙盘</h2>
+</div>
+<div class="sandbox-live-dot"><i></i> 局域网课堂服务</div>
+</div>
+
+<p>
+沙盘程序运行在教师电脑上，因此没有固定公网地址。
+上课时请先连接与教师相同的局域网，再输入教师现场公布的课堂地址。
+</p>
+
+<div class="sandbox-entry-steps">
+<div><b>1</b><span>教师启动课堂服务器</span></div>
+<div><b>2</b><span>教师公布局域网地址</span></div>
+<div><b>3</b><span>学生输入地址进入角色工作台</span></div>
+</div>
+
+<div class="sandbox-entry-form">
+<label for="sandbox-url">教师公布的课堂地址</label>
+<div class="sandbox-url-row">
+<input id="sandbox-url" type="text" placeholder="例如：http://192.168.1.105:8000/student" autocomplete="off"/>
+<button id="sandbox-open" type="button">进入课堂沙盘</button>
+</div>
+<p id="sandbox-entry-message" class="sandbox-entry-message">
+也可以只输入教师电脑的 IPv4 地址，例如 192.168.1.105。
+</p>
+</div>
+
+<div class="sandbox-entry-warning">
+<strong>无法进入时：</strong>
+确认教师已经启动系统、你的设备与教师电脑处于同一局域网，并重新核对教师公布的 IPv4 地址。
+</div>
+</section>
+
+<section class="card" id="after">
+<h2>实验后重点思考</h2>
+<ul class="nice-list">
+<li>“业务已经发生”和“链上交易已经确认”为什么不是同一件事？</li>
+<li>哪些供应链业务事件值得上链？是否所有数据都需要上链？</li>
+<li>智能合约为什么能够自动付款？它能否保证输入数据本身真实？</li>
+<li>链上订单能够帮助银行减少什么核验问题？为什么不能消除全部融资风险？</li>
+<li>区块链的“不可篡改”主要解决什么问题，又不能解决什么问题？</li>
+</ul>
+</section>
+
+</div>
+</div>
+</main>
+
+<footer>
+<p>© 区块链技术与应用课程</p>
+</footer>
+
+<script>
+(function () {
+  const input = document.getElementById("sandbox-url");
+  const button = document.getElementById("sandbox-open");
+  const message = document.getElementById("sandbox-entry-message");
+
+  const saved = localStorage.getItem("blockchainSandboxClassroomUrl");
+  if (saved) input.value = saved;
+
+  function normalizeClassroomUrl(raw) {
+    let value = raw.trim();
+
+    if (!value) {
+      throw new Error("请先输入教师公布的课堂地址。");
+    }
+
+    if (/^\d{1,3}(\.\d{1,3}){3}$/.test(value)) {
+      value = "http://" + value + ":8000/student";
+    } else if (!/^https?:\/\//i.test(value)) {
+      value = "http://" + value;
+    }
+
+    const url = new URL(value);
+
+    if (!["http:", "https:"].includes(url.protocol)) {
+      throw new Error("课堂地址必须以 http:// 或 https:// 开头。");
+    }
+
+    if (!url.port && url.protocol === "http:") {
+      url.port = "8000";
+    }
+
+    if (url.pathname === "/" || url.pathname === "") {
+      url.pathname = "/student";
+    }
+
+    return url.toString();
+  }
+
+  function openClassroom() {
+    try {
+      const url = normalizeClassroomUrl(input.value);
+      localStorage.setItem("blockchainSandboxClassroomUrl", url);
+      message.textContent = "正在打开：" + url;
+      message.classList.remove("is-error");
+      window.open(url, "_blank", "noopener");
+    } catch (err) {
+      message.textContent = err.message;
+      message.classList.add("is-error");
+    }
+  }
+
+  button.addEventListener("click", openClassroom);
+
+  input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") openClassroom();
+  });
+})();
+</script>
+
+</body>
+</html>
