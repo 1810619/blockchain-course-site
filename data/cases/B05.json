@@ -1,0 +1,98 @@
+{
+  "id": "B05",
+  "layer": "basic",
+  "layerLabel": "基础认知",
+  "goal": "理解技术",
+  "title": "一颗钻石的数字身份证——Everledger与JD.com、GIA",
+  "cardTitle": "一颗钻石的数字身份证",
+  "subtitle": "Everledger与JD.com、GIA",
+  "question": "高价值实物怎样把线下鉴定信息与线上可核验记录绑定？",
+  "tags": [
+    "钻石溯源",
+    "数字身份",
+    "防伪"
+  ],
+  "chapters": [
+    "第3章 区块与账本",
+    "第4章 账户与交易"
+  ],
+  "time": "15–25分钟",
+  "detail": "data/cases/B05.json",
+  "bodyHtml": "<h2>证书和实物之间的缝隙</h2>\n<p>钻石交易高度依赖分级报告。消费者看到证书编号、颜色、净度、切工和克拉重量，但在线购买时仍会担心两个问题：报告是否真实，以及眼前这颗钻石是否真的是报告对应的那一颗。纸面或电子证书本身可以复制，因此“证书可信”还不等于“证书和实物的对应关系可信”。<sup>[4]</sup></p>\n<h2>把鉴定数据变成可核验记录</h2>\n<p>Everledger公开案例显示，其与JD.com和GIA实施了跨区块链协作，将GIA钻石分级信息同步到京东区块链防伪追溯平台，并向消费者提供经验证的钻石证书和来源信息。系统还可帮助识别同一份GIA报告被用于多颗钻石等异常情况。<sup>[1,2]</sup></p>\n<h2>“数字身份证”为什么有用</h2>\n<p>当钻石的分级特征、证书和后续交易记录被连接起来，消费者不必只依赖商家自己展示的一张证书截图，而可以检查来自独立鉴定机构的分级信息及其链上记录。Everledger把这种记录称为高价值资产的数字化来源证明。<sup>[3]</sup></p>\n<h2>实物世界仍然需要核验</h2>\n<p>即使线上记录不可轻易修改，实物被调包仍是另一个问题。因此，区块链并不能凭空知道“这颗实物就是那条记录”，仍要依赖GIA鉴定、序列信息、物理特征和交接管理把实体与数字记录绑定起来。<sup>[1,4]</sup></p>\n<h2>钻石为什么需要一套跨机构身份</h2>\n<p>钻石交易具有高价值、低频次和强专业性。普通消费者很难仅凭外观确认等级，通常依赖GIA等专业机构的鉴定报告。问题在于，纸质或PDF报告本身也可能被复制，一个真实报告编号如果被错误地对应到另一颗钻石，就会削弱消费者对线上交易的信任。<sup>[1,3]</sup></p>\n<p>Everledger与GIA、京东合作时，把GIA鉴定信息与电商平台的商品和区块链追溯记录关联。消费者购买时可以查看与该商品对应的验证信息，平台也可以检查同一鉴定报告是否被异常重复使用。这里“数字身份证”的价值在于把专业鉴定、商品销售和后续验证连接起来。<sup>[1,3]</sup></p>\n<h2>数字身份仍要绑定真实物品</h2>\n<p>再可靠的链上记录也需要解决“这条记录对应眼前哪一颗钻石”的问题。鉴定编号、封装、激光刻字或其他物理标识承担的是实体绑定作用。一旦实体被调包，链上数据本身无法自动发现。<sup>[1,4]</sup></p>\n<p>因此，钻石案例把一个常见误区展示得很清楚：区块链可以让数字记录难以被悄悄改写，却不能单独解决物理世界中的替换风险。数字身份真正有效，需要鉴定机构、销售平台、实体标识和核验流程共同配合。<sup>[1,4]</sup></p>\n<h2 id=\"case-question\">问题仍在</h2>\n<div class=\"case-question-box\">高价值实物怎样把线下鉴定信息与线上可核验记录绑定？</div>",
+  "references": [
+    {
+      "label": "[1] Everledger. Everledger with JD.com and GIA Case Study[EB/OL].",
+      "url": "https://everledger.io/case-study/everledger-with-jd-com-and-gia/"
+    },
+    {
+      "label": "[2] JD Corporate Blog. Everledger, GIA and JD.com Join Forces to Bring Unparalleled Trust and Authenticity to Online Diamond Purchases[EB/OL].",
+      "url": "https://jdcorporateblog.com/everledger-gia-and-jd-com-join-forces-to-bring-unparalleled-trust-and-authenticity-to-online-diamond-purchases/"
+    },
+    {
+      "label": "[3] Everledger. Making the commercial case for Blockchain Diamond Tracking[EB/OL].",
+      "url": "https://everledger.io/making-the-commercial-case-for-blockchain-diamond-tracking/"
+    },
+    {
+      "label": "[4] GIA. Chow Tai Fook and GIA Deliver Diamond Grading Reports to Consumers via Blockchain[EB/OL].",
+      "url": "https://www.gia.edu/JP/gia-news-press/chow-tai-fook-gia-blockchain"
+    }
+  ],
+  "taskMeta": {
+    "案例": "Everledger钻石数字身份证",
+    "层次": "基础认知",
+    "核心问题": "高价值实物怎样把线下鉴定信息与线上可核验记录绑定？",
+    "建议方式": "个人阅读 + 小组讨论"
+  },
+  "tasks": [
+    "说明钻石场景中“证书真实性”和“证书—实物对应关系”有什么不同。",
+    "列出建立一颗钻石数字身份可能需要的三类信息。",
+    "解释为什么区块链记录仍需要GIA这类独立鉴定机构。",
+    "如果实物被调包而链上记录未变，会出现什么问题？"
+  ],
+  "conclusion": "请用不超过150字说明：这个场景中区块链解决了什么，没有解决什么。",
+  "visuals": [
+    {
+      "src": "assets/cases/B05/fig01.png",
+      "alt": "B05 案例图示 1"
+    },
+    {
+      "src": "assets/cases/B05/fig02.png",
+      "alt": "B05 案例图示 2"
+    },
+    {
+      "src": "assets/cases/B05/fig03.png",
+      "alt": "B05 案例图示 3"
+    },
+    {
+      "src": "assets/cases/B05/fig04.png",
+      "alt": "B05 案例图示 4"
+    }
+  ],
+  "downloads": [
+    {
+      "name": "案例正文 PDF",
+      "url": "downloads/cases/B05/case_text.pdf",
+      "kind": "pdf"
+    },
+    {
+      "name": "案例正文 Word",
+      "url": "downloads/cases/B05/case_text.docx",
+      "kind": "docx"
+    },
+    {
+      "name": "学生任务单",
+      "url": "downloads/cases/B05/task_sheet.docx",
+      "kind": "docx"
+    },
+    {
+      "name": "案例分析报告模板",
+      "url": "downloads/cases/B05/report_template.docx",
+      "kind": "docx"
+    },
+    {
+      "name": "公开资料链接清单",
+      "url": "downloads/cases/B05/source_links.docx",
+      "kind": "docx"
+    }
+  ]
+}

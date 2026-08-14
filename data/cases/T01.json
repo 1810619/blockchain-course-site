@@ -1,0 +1,103 @@
+{
+  "id": "T01",
+  "layer": "topic",
+  "layerLabel": "专题业务",
+  "goal": "分析业务",
+  "title": "七天与2.2秒之间——Walmart × IBM Food Trust食品追溯实践",
+  "cardTitle": "七天与2.2秒之间",
+  "subtitle": "Walmart × IBM Food Trust食品追溯实践",
+  "question": "多主体食品供应链怎样把分散记录变成可快速查询、可追溯的共享信息？",
+  "tags": [
+    "食品溯源",
+    "联盟链",
+    "多主体协同"
+  ],
+  "chapters": [
+    "第1章 原理概述",
+    "第3章 区块与账本"
+  ],
+  "time": "45–60分钟",
+  "detail": "data/cases/T01.json",
+  "bodyHtml": "<h2>食品不是一条简单的直线</h2>\n<p>一盒切好的芒果摆上货架之前，已经经过种植、采收、包装、运输、配送和零售等多个环节。沃尔玛在2018年全球责任报告中指出，食品系统更像由相互依赖主体组成的复杂网络；纸质记录和彼此不能互通的数字系统，使监管者和零售商在出现问题时不得不逐级拼接信息。<sup>[1]</sup></p>\n<h2>一次“七天”的追踪</h2>\n<p>在美国芒果试点前，沃尔玛团队用传统方式追查一盒切片芒果的来源，耗时接近7天。问题不在于完全没有记录，而在于记录分散在不同供应链成员手中，需要通过电话、邮件和人工核对逐层获取。<sup>[1,2]</sup></p>\n<h2>2.2秒意味着什么</h2>\n<p>沃尔玛与IBM使用Hyperledger Fabric搭建食品追溯概念验证，将芒果的种植、采收和供应链流转信息关联到共享账本中。试点中，芒果来源查询缩短到2.2秒。这个数字只代表“已有追溯记录的查询速度”，并不意味着食品检测、现场调查或完整召回只需要2.2秒。<sup>[1,2]</sup></p>\n<h2>从试点走向供应商网络</h2>\n<p>2018年美国罗马生菜大肠杆菌事件再次暴露食品追溯的现实压力。9月，沃尔玛宣布要求新鲜绿叶菜供应商采用基于区块链的实时端到端追溯到农场。项目从内部试验进入供应商协同阶段，技术问题也随之变成数据标准、接入成本和治理问题。<sup>[3]</sup></p>\n<h2>为什么还要GS1标准</h2>\n<p>共享账本并不能自动解决“同一种产品各企业叫法不同”的问题。IBM Food Trust要求组织之间的数据交换遵循GS1标准，用统一标识描述产品、地点和物流单元。由此可以看到，区块链能够维护共同记录，但前提仍包括数据标准和业务规则。<sup>[4]</sup></p>\n<h2>今天的追溯要求</h2>\n<p>沃尔玛供应商食品安全页面仍把食品追溯视为供应商管理的重要要求，并要求提供关键数据元素和关键追踪事件。区块链在这一体系中的价值，不应被简化为“不可篡改”四个字，而应放回多主体共享、快速定位和责任核验的业务环境中理解。<sup>[5]</sup></p>\n<h2>追溯慢，往往不是因为“没有数据”</h2>\n<p>大型零售商每天面对成千上万种食品和大量供应商。农场有种植和采收记录，加工企业有批次和包装记录，物流企业有运输和交接记录，零售商也有收货与销售记录。真正困难的是这些记录使用不同系统、不同编码和不同保存方式。当一盒商品需要向上追溯时，零售商往往先确认直接供应商，再由供应商继续联系加工厂和农场，信息沿供应链反向逐级收集。每一步都可能需要人工确认。<sup>[1,2]</sup></p>\n<p>因此，七天的追溯时间不能简单归结为纸质单据落后，更深层的问题是跨企业的信息组织方式。即使所有企业都已经建立数据库，只要彼此之间缺少统一的产品标识、批次关系和共享规则，调查人员仍然需要“把多个数据库拼起来”。Food Trust试图改变的正是这一过程。<sup>[1,2]</sup></p>\n<h2>试点为什么同时选了美国芒果和中国猪肉</h2>\n<p>沃尔玛公开材料把美国芒果和中国猪肉作为早期试点场景。两类产品的供应链结构、监管环境和数据来源并不相同，这使试点不仅要验证查询速度，还要验证不同地区、不同品类能否用同一种共享账本思路组织追溯信息。对平台而言，真正有价值的不是完成一次演示，而是证明方法能够跨场景复用。<sup>[1,2]</sup></p>\n<p>试点过程中需要先确定哪些事件具有追溯价值，例如产品何时采收、何时加工、何时装运、在哪个配送节点交接。只有这些关键事件能够被连续关联，2.2秒的查询结果才有意义。否则，查询再快也只是快速找到一组无法互相对应的数据。<sup>[1,2]</sup></p>\n<h2>从技术试验到供应商治理</h2>\n<p>2018年绿叶菜要求把项目推向新的阶段。小范围试点时，参与者数量有限，数据字段和接口可以由项目团队逐一协调；当大量供应商接入以后，谁必须提交哪些字段、什么时间提交、格式不合格怎么办、供应商不接入是否还能继续供货，都成为供应链治理问题。<sup>[3]</sup></p>\n<p>沃尔玛要求供应商实现实时端到端追溯到农场，意味着追溯不再是零售商内部的技术项目，而成为供应商履约的一部分。零售商利用采购关系推动网络形成，供应商则需要改造自身数据采集和接口。这种“链主企业推动”也是产业区块链常见的组织方式。<sup>[3]</sup></p>\n<h2>标准化是隐藏在区块链之后的基础工作</h2>\n<p>GS1标准解决的是“大家如何描述同一个对象”。例如产品需要有统一商品标识，地点需要有统一位置标识，物流单元也需要能够被唯一识别。如果不同供应商使用各自内部编码，共享账本只能保存更多互不兼容的数据。<sup>[4]</sup></p>\n<p>因此，Food Trust的实施同时涉及区块链平台和数据标准。区块链保证的是参与方对关键记录的共同维护和审计能力，GS1保证的是记录之间能够被正确解释和关联。把两者区分开，才能说明平台真正的业务基础。<sup>[4]</sup></p>\n<h2>更快追溯以后，企业仍要做选择</h2>\n<p>快速定位能够帮助企业缩小调查范围，但食品安全决策还包括样品检测、风险评估、供应商整改和监管沟通。如果源头农场最初就录入错误批次，或者线下混批没有被数字系统捕捉，链上查询会迅速返回一条“完整但错误”的路径。<sup>[5]</sup></p>\n<p>这使Food Trust的价值边界非常清楚：它提高跨主体记录的连续性和查询效率，却必须与供应商审核、质量控制、现场检测和数据标准共同工作。真正值得分析的并不是“区块链是否先进”，而是这种业务环境中多主体共享账本是否比各自维护孤立系统更有效。<sup>[5]</sup></p>\n<h2 id=\"case-question\">问题仍在</h2>\n<div class=\"case-question-box\">多主体食品供应链怎样把分散记录变成可快速查询、可追溯的共享信息？</div>",
+  "references": [
+    {
+      "label": "[1] Walmart. 2018 Global Responsibility Report[EB/OL].",
+      "url": "https://stock.walmart.com/_assets/_18ed1d7a9ca00ed907b4d855b82f677b/walmart/db/951/9697/file/WAL-071_2018_GRR_Full_Book%5B1%5D.pdf"
+    },
+    {
+      "label": "[2] LF Decentralized Trust. How Walmart brought unprecedented transparency to the food supply chain with Hyperledger Fabric[EB/OL].",
+      "url": "https://www.lfdecentralizedtrust.org/case-studies/walmart-case-study"
+    },
+    {
+      "label": "[3] Walmart Corporate. In Wake of Romaine E. coli Scare, Walmart Deploys Blockchain to Track Leafy Greens[EB/OL].",
+      "url": "https://corporate.walmart.com/news/2018/09/24/in-wake-of-romaine-e-coli-scare-walmart-deploys-blockchain-to-track-leafy-greens"
+    },
+    {
+      "label": "[4] IBM Support. GS1 Standards for data integration[EB/OL].",
+      "url": "https://www.ibm.com/support/pages/node/1108425"
+    },
+    {
+      "label": "[5] Walmart Supplier Food Safety. Food Traceability[EB/OL].",
+      "url": "https://enablement.walmart.com/content/food-safety/en_us/food-safety-requirements/food-traceability.html"
+    }
+  ],
+  "taskMeta": {
+    "案例": "Walmart × IBM Food Trust",
+    "层次": "专题业务",
+    "核心问题": "多主体食品供应链怎样把分散记录变成可快速查询、可追溯的共享信息？",
+    "建议方式": "个人阅读 + 小组讨论"
+  },
+  "tasks": [
+    "还原农场、加工/包装、物流/配送、零售商之间的主要信息流。",
+    "解释为什么“大家都有数据库”仍可能追溯很慢。",
+    "把数据来源认证、记录一致性、产品定位分别匹配到相应技术或管理机制。",
+    "说明GS1标准为什么不是区块链自带功能。",
+    "讨论：如果农场第一次录入的数据就是假的，系统应如何降低风险？"
+  ],
+  "conclusion": "请用不超过150字说明：这个场景中区块链解决了什么，没有解决什么。",
+  "visuals": [
+    {
+      "src": "assets/cases/T01/fig01.png",
+      "alt": "T01 案例图示 1"
+    },
+    {
+      "src": "assets/cases/T01/fig02.png",
+      "alt": "T01 案例图示 2"
+    },
+    {
+      "src": "assets/cases/T01/fig03.png",
+      "alt": "T01 案例图示 3"
+    },
+    {
+      "src": "assets/cases/T01/fig04.png",
+      "alt": "T01 案例图示 4"
+    }
+  ],
+  "downloads": [
+    {
+      "name": "案例正文 PDF",
+      "url": "downloads/cases/T01/case_text.pdf",
+      "kind": "pdf"
+    },
+    {
+      "name": "案例正文 Word",
+      "url": "downloads/cases/T01/case_text.docx",
+      "kind": "docx"
+    },
+    {
+      "name": "学生任务单",
+      "url": "downloads/cases/T01/task_sheet.docx",
+      "kind": "docx"
+    },
+    {
+      "name": "案例分析报告模板",
+      "url": "downloads/cases/T01/report_template.docx",
+      "kind": "docx"
+    },
+    {
+      "name": "公开资料链接清单",
+      "url": "downloads/cases/T01/source_links.docx",
+      "kind": "docx"
+    }
+  ]
+}
